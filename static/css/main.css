@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700');
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url("../img/main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+main {
+    margin-top: 4rem;
+    display: flex;
+}
+
+.logo-main {
+    display: flex;
+    min-height: 100vh;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding-top: 3rem;
+}
+
+.logo-paolo {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.7rem;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px 2px #191919;
+}
+
+.logo-martino {
+    font-family: "Robotto", sans-serif;
+    font-size: 2.7rem;
+    color: white;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px #191919;
+}
+
+@media (max-width: 320px) {
+    .logo-paolo {
+        font-size: 2rem;
+    }
+    
+    .logo-martino {
+        font-size: 2rem;
+    }
+    
+  }
+
+@media (min-width: 500px) {
+    .logo-paolo {
+        font-size: 4rem;
+    }
+    
+    .logo-martino {
+        font-size: 4rem;
+    }
+    
+  }
+
+  @media (min-width: 768px) {
+    .logo-main {
+        padding-top: 6rem;
+    }
+
+    .logo-paolo {
+        font-size: 5rem;
+    }
+    
+    .logo-martino {
+        font-size: 5rem;
+    }
+    
+  }
+
+  @media (min-width: 992px) {
+
+    
+  }
+
+  @media (min-width: 1600px) {
+    .logo-paolo {
+        font-size: 6rem;
+        padding-top: 9rem;
+    }
+    
+    .logo-martino {
+        font-size: 6rem;
+        padding-top: 9rem;
+    }
+    
+  }

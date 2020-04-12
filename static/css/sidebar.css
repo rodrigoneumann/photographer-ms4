@@ -1,0 +1,171 @@
+  /***** Sidebar *****/
+
+  .sidebar {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -305px;
+    z-index: 999;
+    background: #fff;
+    color: #555;
+    transition: all .3s;
+    text-align: left;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+
+  /*---- Dark overlay ----*/
+
+  .overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #4e4e4eb3;
+    z-index: 998;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+
+  .overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .open-menu {
+    position: fixed;
+    z-index: 997;
+  }
+
+
+  /*---- Sidebar Trigger ----*/
+
+  .sidebar-trigger {
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  .btn-custom {
+    margin: 5px 0 0 15px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  .btn-custom:hover {
+    outline: 0;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  /* ---- Close Sidebar Trigger ---- */
+
+  .close-menu {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all .3s;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+  }
+
+  .close-menu:hover,
+  .close-menu:focus {
+    color: #6d6d6d;
+  }
+
+  /* ---- Sidebar Logo ---- */
+
+  .sidebar-logo {
+    display: flex;
+    padding: 50px 10px 10px 20px;
+    border-bottom: 1px solid #444;
+    transition: all .3s;
+    font-size: 0;
+  }
+
+  .sidebar-logo-paolo {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    color: #191919;
+    font-weight: 100;
+    text-shadow: 1px 1px 1px #888787ce;
+}
+
+.sidebar-logo-martino {
+    font-family: "Robotto", sans-serif;
+    font-size: 2rem;
+    color: #191919;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px #888787ce;
+}
+
+  /* ---- Menu Links ---- */
+
+  .menu-elements {
+    padding: 10px 5px;
+    border-bottom: 1px solid #444;
+    transition: all .3s;
+  }
+
+  .sidebar ul li a {
+    display: block;
+    padding: 5px 20px;
+    border: 0;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  .sidebar ul li a:hover,
+  .sidebar ul li a:focus,
+  .sidebar ul li.active>a:hover,
+  .sidebar ul li.active>a:focus {
+    outline: 0;
+    background: #555;
+    color: #fff;
+    border-radius: 5px;
+
+  }
+
+  .sidebar ul li a i {
+    margin-right: 5px;
+  }
+
+  .sidebar ul li.active>a,
+  a[aria-expanded="true"] {
+    background: #444;
+    color: #fff;
+  }
+
+  .sidebar ul ul a {
+    background: #444;
+    padding-left: 30px;
+    font-size: 14px;
+  }
+
+  .sidebar ul ul li.active>a {
+    background: #555;
+  }
+
+  .sidebar a[data-toggle="collapse"] {
+    position: relative;
+  }
+
+  @media (max-width: 460px) {
+    .sidebar {
+      width: 100vw;
+      left: -100vw;
+    }
+  }
