@@ -26,7 +26,6 @@ main {
     -webkit-justify-content: center;
     justify-content: center;
     flex-direction: row;
-    align-items: center;
     width: 100%;
     justify-content: center;
     margin: 0;
@@ -48,6 +47,68 @@ main {
     font-weight: 300;
     text-shadow: 2px 2px 2px #191919;
 }
+
+/*---- Footer ----*/
+
+footer {
+    background-color: #191919;
+}
+
+.footer-logo {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+}
+
+.footer-logo-paolo {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px 2px #191919;
+}
+
+.footer-logo-martino {
+    font-family: "Robotto", sans-serif;
+    font-size: 1rem;
+    color: white;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px #191919;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    font-size: 30px;
+    color: #bebebe;
+}
+
+.list-inline {
+    margin-bottom: 5px
+}
+
+.list-inline-item:hover {
+    color: #a30d0d
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    color: #bebebe;
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 
 @media (max-width: 320px) {
     .logo-paolo {
