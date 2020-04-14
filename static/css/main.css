@@ -9,7 +9,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 main {
@@ -36,8 +35,8 @@ main {
     font-family: "Roboto", sans-serif;
     font-size: 2.7rem;
     color: white;
-    font-weight: 100;
-    text-shadow: 2px 2px 2px #191919;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.87);
 }
 
 .logo-martino {
@@ -45,7 +44,7 @@ main {
     font-size: 2.7rem;
     color: white;
     font-weight: 300;
-    text-shadow: 2px 2px 2px #191919;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.87);
 }
 
 /*---- Footer ----*/
@@ -70,8 +69,7 @@ footer {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     color: white;
-    font-weight: 100;
-    text-shadow: 2px 2px 2px #191919;
+    font-weight: 200;
 }
 
 .footer-logo-martino {
@@ -79,7 +77,6 @@ footer {
     font-size: 1rem;
     color: white;
     font-weight: 300;
-    text-shadow: 2px 2px 2px #191919;
 }
 
 .footer-list {
@@ -114,25 +111,25 @@ footer {
     .logo-paolo {
         font-size: 2rem;
     }
-    
+
     .logo-martino {
         font-size: 2rem;
     }
-    
-  }
+
+}
 
 @media (min-width: 500px) {
     .logo-paolo {
         font-size: 4rem;
     }
-    
+
     .logo-martino {
         font-size: 4rem;
     }
-    
-  }
 
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .logo-main {
         padding-top: 6rem;
     }
@@ -140,27 +137,24 @@ footer {
     .logo-paolo {
         font-size: 5rem;
     }
-    
+
     .logo-martino {
         font-size: 5rem;
     }
-    
-  }
 
-  @media (min-width: 992px) {
+}
 
-    
-  }
+@media (min-width: 992px) {}
 
-  @media (min-width: 1600px) {
+@media (min-width: 1600px) {
     .logo-paolo {
         font-size: 6rem;
         padding-top: 9rem;
     }
-    
+
     .logo-martino {
         font-size: 6rem;
         padding-top: 9rem;
     }
-    
-  }
+
+}
