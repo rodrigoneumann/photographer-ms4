@@ -5,20 +5,19 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #191919;
+}
+
+.index-main {
     background-image: url("../img/main.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-main {
-    margin-top: 4rem;
+/* Logo Top page if not main */
+.logo-top {
     display: flex;
-}
-
-.logo-main {
-    display: flex;
-    min-height: 100vh;
     display: -webkit-flex;
     -webkit-align-items: center;
     align-items: center;
@@ -27,8 +26,39 @@ main {
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    margin: 15px 0 0 15px;
+    padding: 0.35rem 0 0 2.3rem;
+}
+
+.logo-top-paolo {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.87);
+}
+
+.logo-top-martino {
+    font-family: "Robotto", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.87);
+}
+/* End Logo Top page if not main */
+
+
+.logo-main {
+    min-height: 100vh;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
     margin: 0;
-    padding-top: 3rem;
+    padding-top: 6rem;
 }
 
 .logo-paolo {
@@ -50,6 +80,8 @@ main {
 /*---- Footer ----*/
 
 footer {
+    margin-top: 3rem;
+    width: 100%;
     background-color: #191919;
 }
 
@@ -130,8 +162,21 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .logo-top {
+        margin: 0 0 0 15px;
+        padding: 0.45rem 0 0 2.3rem;
+    }
+
+    .logo-top-paolo {
+        font-size: 2.2rem;
+    }
+    
+    .logo-top-martino {
+        font-size: 2.2rem;
+    }
+
     .logo-main {
-        padding-top: 6rem;
+        padding-top: 10rem;
     }
 
     .logo-paolo {
@@ -144,9 +189,32 @@ footer {
 
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .logo-top {
+        padding: 0.55rem 0 0 2.3rem;
+    }
+
+    .logo-main {
+        padding-top: 12rem;
+    }
+}
 
 @media (min-width: 1600px) {
+    .logo-top {
+        margin: 5px 0 0 0;
+    }
+    .logo-top-paolo {
+        font-size: 2.2rem;
+    }
+    
+    .logo-top-martino {
+        font-size: 2.2rem;
+    }
+
+    .logo-main {
+        padding-top: 6rem;
+    }
+
     .logo-paolo {
         font-size: 6rem;
         padding-top: 9rem;

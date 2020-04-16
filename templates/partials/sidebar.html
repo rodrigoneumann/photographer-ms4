@@ -66,6 +66,7 @@
 <!-- Dark overlay -->
 <div class="overlay"></div>
 
+<!-- Content -->
 <div class="sidebar-trigger">
 
     <!-- open sidebar menu -->
@@ -74,4 +75,16 @@
     </a>
 
 </div>
+
+{% if request.path != '/' %}
+<div class="logo-top">
+    <div class="logo-top-paolo">
+        <span>Paolo&nbsp;</span>
+    </div>
+    <div class="logo-top-martino">
+        <span>Martino</span>
+    </div>
+</div>
+{% else %}
+{% endif %}
 <!-- End content -->
