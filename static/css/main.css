@@ -6,7 +6,30 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: #191919;
+    color: rgba(255, 255, 255, 0.87)
 }
+
+a, u {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+a:hover, a:active {
+    color: inherit;
+}
+
+
+/*---- Breadcumbs style ----*/
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+
+.breadcrumb-style {
+    background-color: #2E2E2E;
+}
+/*---- End Breadcumbs style ----*/
+
 
 .index-main {
     background-image: url("../img/main.jpg");
@@ -75,6 +98,61 @@ body {
     color: white;
     font-weight: 300;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.87);
+}
+
+/*---- Login and Register ----*/
+.login-container,
+.register-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #2E2E2E;
+    margin: 1rem auto auto auto;
+    border: 1px solid #8f8f8f; 
+    border-radius: 7px;
+}
+
+.login-title,
+.register-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+    margin: 2rem auto 1rem auto;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.register-button,
+.login-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.user-icon {
+    font-size: 40px;
+    padding: 4px 8px 0 0;
+    color: rgb(255, 255, 255);
+}
+
+.password-icon {
+    font-size: 35px;
+    padding: 4px 8px 0 0;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 /*---- Footer ----*/
