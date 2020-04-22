@@ -34,9 +34,21 @@
         <li>
             <a class="menu-link" href="#">CONTACT</a>
         </li>
+        {% if user.is_authenticated %}
+        <li>
+            <a class="menu-link" href="{% url 'profile' %}">MY ACCOUNT</a>
+        </li>
+        <li>
+            <a class="menu-link" href="{% url 'logout' %}">LOGOUT</a>
+        </li>
+        {% else %}
+        <li>
+            <a class="menu-link" href="{% url 'register' %}">REGISTER</a>
+        </li>
         <li>
             <a class="menu-link" href="{% url 'login' %}">LOGIN</a>
         </li>
+        {% endif %}
     </ul>
     <div class="container">
         <!-- Social Media Icons -->

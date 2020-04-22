@@ -1,6 +1,7 @@
 from django.contrib.auth import views as auth_views
 from django.urls import include, path
 from .views import register, profile
+from accounts import urls_pwd_rst
 
 
 urlpatterns = [
@@ -18,4 +19,5 @@ urlpatterns = [
         name="logout",
     ),
     path("profile/", profile, name="profile"),
+    path("pwd-reset/", include(urls_pwd_rst)),
 ]
