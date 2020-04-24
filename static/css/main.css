@@ -106,7 +106,8 @@ a:active {
 
 /*---- Login and Register ----*/
 .login-container,
-.register-container {
+.register-container,
+.reset-pwd-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -115,6 +116,7 @@ a:active {
     -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 1rem;
+    color: #ffffffde;
     margin-bottom: 2rem;
     background-color: #2E2E2E;
     border: 1px solid #8f8f8f;
