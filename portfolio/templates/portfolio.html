@@ -23,4 +23,20 @@
     </div>
 </div>
 
+<div class="container">
+    {% for photo in photos %}
+    <div class="row">
+        <div class="row mb-2">
+            {{ photo.title }}
+        </div></br>
+        <div class="row mb-2">
+            {{ photo.description }}
+        </div>
+        <div class="row">
+            {{ photo.image }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}

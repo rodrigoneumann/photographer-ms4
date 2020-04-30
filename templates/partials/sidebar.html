@@ -26,13 +26,13 @@
             <a class="menu-link" href="{% url 'photos'%}">PORTFOLIO</a>
         </li>
         <li>
-            <a class="menu-link" href="#">ABOUT ME</a>
+            <a class="menu-link" href="{% url 'about'%}">ABOUT ME</a>
         </li>
         <li>
-            <a class="menu-link" href="#">SERVICES</a>
+            <a class="menu-link" href="{% url 'services'%}">SERVICES</a>
         </li>
         <li>
-            <a class="menu-link" href="#">CONTACT</a>
+            <a class="menu-link" href="{% url 'contact'%}">CONTACT</a>
         </li>
         {% if user.is_authenticated %}
         <li>

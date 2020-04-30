@@ -146,14 +146,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
 LOGIN_URL = 'login'
-
 LOGIN_REDIRECT_URL = '/'
-
 LOGOUT_REDIRECT_URL = 'login'
 
 #Cryspy template for bootstrap 4 configuration
@@ -182,6 +176,7 @@ AWS_DEFAULT_ACL = None
 AWS_LOCATION = 'static'
 
 
-
+DEFAULT_FILE_STORAGE = "main.custom_storage.MediaStorage"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 
