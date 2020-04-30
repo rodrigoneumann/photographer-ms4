@@ -47,6 +47,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'cart',
+    'portfolio',
+    'proServices',
+    'pages',
     'crispy_forms',
     'storages',
 ]

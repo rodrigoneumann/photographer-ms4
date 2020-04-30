@@ -4,9 +4,6 @@ from django.contrib.auth.models import User
 from .forms import RegisterForm
 
 
-def index(request):
-    return render(request, "index.html")
-
 def register(request):
     if request.user.is_authenticated:
         return redirect(reverse('index'))
