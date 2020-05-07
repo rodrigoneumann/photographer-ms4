@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: #191919;
-    color: rgba(255, 255, 255, 0.87)
+    color: rgba(255, 255, 255, 0.87);
 }
 
 a,
@@ -52,7 +52,7 @@ a:active {
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    margin: 15px 0 0 15px;
+    margin: 15px 0 15px 15px;
     padding: 0.35rem 0 0 2.3rem;
 }
 
@@ -176,15 +176,74 @@ a:active {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-.btn-register, .btn-login {
+.btn-register,
+.btn-login {
     background-color: #838383de;
     color: #ffffffde;
 }
 
-.btn-register:hover, .btn-login:hover {
+.btn-register:hover,
+.btn-login:hover {
     background-color: #a30d0dde;
     color: #ffffffde;
 }
+
+/*---- Portfolio ----*/
+
+.categories-menu {
+    display:none;
+}
+
+.category-btn {
+    background-color: #2E2E2E;
+    color: #ffffffde;
+    margin: 0 7px;
+    border: 1px solid #8f8f8f;
+}
+
+.category-btn:hover {
+    background-color: #a30d0dde;
+    color: #ffffffde;
+}
+
+
+.photo-box {
+    margin: 0 0 0.5rem 0;
+}
+
+.photo-box:hover {
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -webkit-box-shadow: 0px 1px 14px 12px #272727;
+    box-shadow: 0px 1px 14px 12px #272727;
+}
+
+.photo-image-box {
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.photo-title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    font-size: 23px;
+}
+
+.photo-title {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+/*---- End Portfolio ----*/
 
 /*---- Footer ----*/
 
@@ -294,6 +353,12 @@ footer {
 
     .logo-martino {
         font-size: 5rem;
+    }
+
+    .categories-menu {
+        display:flex;
+        justify-content: center;
+        margin: 1rem 0 2rem 0;
     }
 
 }

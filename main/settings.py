@@ -177,6 +177,8 @@ AWS_LOCATION = 'static'
 
 
 DEFAULT_FILE_STORAGE = "main.custom_storage.MediaStorage"
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+#Development local static files, after project done, send to remote server
+#STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 
