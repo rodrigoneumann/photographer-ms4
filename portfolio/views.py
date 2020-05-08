@@ -59,14 +59,14 @@ def all_videos(request):
 
 def institutional_videos_view(request):
     videos = Video.objects.filter(category="institutional")
-    category_name = "Institutional Film"
+    category_name = "Institutional"
     return render(
         request, "video.html", {"videos": videos, "category": category_name}
     )
 
 def shows_videos_view(request):
-    videos = Video.objects.filter(category="shows")
-    category_name = "Music Shows"
+    videos = Video.objects.filter(category="music")
+    category_name = "Music"
     return render(
         request, "video.html", {"videos": videos, "category": category_name}
     )
@@ -80,7 +80,7 @@ def events_videos_view(request):
 
 def drone_videos_view(request):
     videos = Video.objects.filter(category="drone")
-    category_name = "Drone footage"
+    category_name = "Drone"
     return render(
         request, "video.html", {"videos": videos, "category": category_name}
     )

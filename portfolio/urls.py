@@ -28,6 +28,6 @@ urlpatterns = [
     path("videos/", all_videos, name="videos"),
     path("videos/institutional", institutional_videos_view, name="institutional"),
     path("videos/events", events_videos_view, name="events"),
-    path("videos/shows", shows_videos_view, name="shows"),
+    path("videos/music", shows_videos_view, name="video_music"),
     path("videos/drone", drone_videos_view, name="drone"),
 ]

@@ -23,8 +23,7 @@
 
 <!---- Content ---->
 
-<div class="col-12"></div>
-<div class="container">
+<div class="container p-0">
     <div class="row login-title">
         <span>PHOTOS</span>
     </div>
@@ -41,21 +40,23 @@
     <!---- End Categories ---->
 
     <!-- Photos -->
-    <div class="row col-12 mx-auto px-0 px-md-auto">
-        {% for photo in photos %}
-        <div class="col-md-6 col-lg-4">
-            <a href="">
-                <div class="photo-box">
-                    <div class="photo-image-box">
-                        <img src="{{ photo.image.url }}" class="img-fluid photo-image" alt="{{ photo.title }}">
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row justify-content-center thumbnail mx-2">
+                    {% for photo in photos %}
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 photos-box">
+                        <a href="">
+                            <img class="w-100" src="{{ photo.image.url }}" alt="{{ photo.title }}">
+                        </a>
                     </div>
+                    {% endfor %}
                 </div>
-            </a>
+            </div>
         </div>
-        {% endfor %}
     </div>
-    <!-- End Photos -->
 </div>
-</div>
+
 
 {% endblock %}

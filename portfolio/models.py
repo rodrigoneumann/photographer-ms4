@@ -21,10 +21,10 @@ class Photo(models.Model):
 
 class Video(models.Model):
     CATEGORY_CHOICES = (
-    ('institutional', 'Institutional film'),
-    ('shows', 'Music Shows'),
+    ('institutional', 'Institutional'),
+    ('music', 'Music'),
     ('events', 'Events'),
-    ('drone', 'Drone footage'),
+    ('drone', 'Drone'),
     )
 
     title = models.CharField(max_length=254, default='')

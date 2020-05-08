@@ -4,6 +4,7 @@
 body {
     display: flex;
     min-height: 100vh;
+    width: 100vw;
     flex-direction: column;
     background-color: #191919;
     color: rgba(255, 255, 255, 0.87);
@@ -50,7 +51,6 @@ a:active {
     -webkit-justify-content: center;
     justify-content: center;
     flex-direction: row;
-    width: 100%;
     justify-content: center;
     margin: 15px 0 15px 15px;
     padding: 0.35rem 0 0 2.3rem;
@@ -191,7 +191,7 @@ a:active {
 /*---- Portfolio ----*/
 
 .categories-menu {
-    display:none;
+    display: none;
 }
 
 .category-btn {
@@ -206,12 +206,19 @@ a:active {
     color: #ffffffde;
 }
 
-
-.photo-box {
-    margin: 0 0 0.5rem 0;
+.gallery,
+img {
+    width: 100%;
+    height: 100%;
 }
 
-.photo-box:hover {
+
+.portfolio-box {
+    margin: 0 1rem 4rem 1rem;
+    padding: 0;
+}
+
+.portfolio-box:hover {
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -219,28 +226,30 @@ a:active {
     box-shadow: 0px 1px 14px 12px #272727;
 }
 
-.photo-image-box {
-    width: 100%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.photos-box {
+    margin: 0 1rem 2rem 1rem;
+    padding: 0;
 }
 
-.photo-title-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin: auto;
-    font-size: 23px;
+.photos-box:hover {
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -webkit-box-shadow: 0px 1px 14px 12px #272727;
+    box-shadow: 0px 1px 14px 12px #272727;
 }
 
-.photo-title {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    font-weight: bold;
-    margin: 0;
+.video-box {
+    position:relative;
+    padding:56.25% 0 0 0;
+}
+
+iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 
 /*---- End Portfolio ----*/
@@ -356,9 +365,9 @@ footer {
     }
 
     .categories-menu {
-        display:flex;
+        display: flex;
         justify-content: center;
-        margin: 1rem 0 2rem 0;
+        margin: 1rem 0 0 0;
     }
 
 }

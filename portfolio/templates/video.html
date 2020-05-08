@@ -11,8 +11,12 @@
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+        {% if category %}
+        <li class="breadcrumb-item"><a href="{% url 'videos' %}">Videos</li></a>
+        <li class="breadcrumb-item active">{{ category }}</li>
+        {% else %}
         <li class="breadcrumb-item active">All Videos</li>
-
+        {% endif %}
     </ol>
 </nav>
 <!---- End Breadcrumb ---->
@@ -26,31 +30,29 @@
     </div>
     <!---- Photo Categories ---->
     <div class="categories-menu">
-        <a href="{% url 'videos' %}" class="btn category-btn">View all</a>
-        <a href="{% url 'institutional' %}" class="btn category-btn">Institutional film</a>
-        <a href="{% url 'shows' %}" class="btn category-btn">Music Shows</a>
+        <a href="{% url 'videos' %}" class="btn category-btn">All Videos</a>
+        <a href="{% url 'institutional' %}" class="btn category-btn">Institutional</a>
+        <a href="{% url 'video_music' %}" class="btn category-btn">Music</a>
         <a href="{% url 'events' %}" class="btn category-btn">Events</a>
-        <a href="{% url 'drone' %}" class="btn category-btn">Drone footage</a>
+        <a href="{% url 'drone' %}" class="btn category-btn">Drone</a>
     </div>
 
     <!---- End Categories ---->
 
     <!-- Videos -->
-    <div class="row col-12 mx-auto px-0 px-md-auto">
+    <div class="row justify-content-center m-0">
         {% for video in videos %}
         <div class="col-md-6 col-lg-4">
-            <a href="">
-                <div class="photo-box">
-                    <div class="photo-image-box">
-                        <img src="{{ video.video_url.url }}" class="img-fluid photo-image" alt="{{ video.title }}">
-                    </div>
-                </div>
-            </a>
+            <div class="col-12 video-box">
+                <iframe src="{{ video.videoUrl }}?title=0&byline=0&portrait=0" frameborder="0"
+                    allow="autoplay; fullscreen" allowfullscreen>
+                </iframe>
+                <div class="row justify-content-center pt-5 pb-2">{{ video.title }}</div>
+            </div>
         </div>
         {% endfor %}
     </div>
     <!-- End Videos -->
-</div>
 </div>
 
 {% endblock %}

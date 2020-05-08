@@ -17,11 +17,32 @@
 
 <!---- Content ---->
 
-<div class="col-12"></div>
 <div class="container">
     <div class="row login-title">
         <span>PORTFOLIO</span>
     </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row justify-content-center thumbnail px-2">
+                    <div class="col-12 col-sm-6 col-lg-4 portfolio-box">
+                        <a href="{% url 'photos' %}">
+                            <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/categories_photo.jpg" alt="Photography">
+                        </a>
+                        <div class="row justify-content-center pt-2">PHOTOGRAPHY</div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 portfolio-box">
+                        <a href="{% url 'videos' %}">
+                            <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/categories_video.jpg" alt="Video">
+                        </a>
+                        <div class="row justify-content-center pt-2">VIDEO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
