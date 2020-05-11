@@ -104,6 +104,54 @@ a:active {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.87);
 }
 
+/* Index - About-me */
+
+.index-about {
+    position: relative;
+    width: 100%;
+    margin: 1.5rem auto 1rem auto;
+    overflow-y: hidden;
+
+}
+
+.index-about-description {
+    margin: 0.5rem 1rem auto 1rem;
+}
+
+.index-about-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* End Index - About-me */
+
+/* Index - Services */
+
+.index-services-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    font-size: 4.5rem;
+    color: #bebebe;
+}
+
+.index-services-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* End Index - Services */
+
 /*---- Login and Register ----*/
 .login-container,
 .register-container,
@@ -124,7 +172,8 @@ a:active {
 }
 
 .login-title,
-.register-title {
+.register-title,
+.page-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -135,7 +184,7 @@ a:active {
     justify-content: center;
     font-family: "Roboto", sans-serif;
     font-weight: 100;
-    font-size: 28px;
+    font-size: 1.7rem;
     margin: 2rem auto 1rem auto;
     color: rgba(255, 255, 255, 0.87);
 }
@@ -397,6 +446,12 @@ footer {
     .logo-martinelli {
         font-size: 5rem;
     }
+
+    .login-title,
+.register-title,
+.page-title {
+    font-size: 2rem;
+}
 
     .categories-menu {
         display: flex;
