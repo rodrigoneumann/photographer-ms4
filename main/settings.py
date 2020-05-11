@@ -34,7 +34,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [env('HOSTNAME')]
+ALLOWED_HOSTS = [env('HOSTNAME'), '192.168.1.174']
 
 
 # Application definition
@@ -179,6 +179,6 @@ AWS_LOCATION = 'static'
 DEFAULT_FILE_STORAGE = "main.custom_storage.MediaStorage"
 
 #Development local static files, after project done, send to remote server
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+#STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 
