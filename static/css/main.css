@@ -333,8 +333,8 @@ a:active {
 }
 
 .video-box {
-    position: relative;
-    padding: 56.25% 0 0 0;
+    text-align: center;
+    padding: 2rem 0 0 0;
 }
 
 /*---- End Portfolio ----*/
@@ -464,7 +464,7 @@ footer {
     .categories-menu {
         display: flex;
         justify-content: center;
-        margin: 1rem 0 0 0;
+        margin: 1rem 0 1.5rem 0;
     }
 
 }

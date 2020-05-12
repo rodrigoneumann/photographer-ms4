@@ -40,14 +40,14 @@
     <!---- End Categories ---->
 
     <!-- Videos -->
-    <div class="row justify-content-center m-0">
+    <div class="row justify-content-center mb-4">
         {% for video in videos %}
-        <div class="col-md-6 col-lg-4" data-aos="fade-in">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
             <div class="col-12 video-box">
                 <iframe src="{{ video.videoUrl }}?title=0&byline=0&portrait=0" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen>
                 </iframe>
-                <div class="row justify-content-center pt-5 pb-2">{{ video.title }}</div>
+                <div class="row justify-content-center pt-2 pb-2">{{ video.title }}</div>
             </div>
         </div>
         {% endfor %}
