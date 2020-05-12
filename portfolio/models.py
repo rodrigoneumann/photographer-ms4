@@ -8,7 +8,9 @@ class Photo(models.Model):
     ('Studio', 'Studio'),
     ('Food', 'Food'),
     ('Weeding', 'Weeding'),
-    ('Travel', 'Travel')
+    ('Travel', 'Travel'),
+    ('drone', 'Drone'),
+    ('fineArt', 'Fine Art'),
     )
 
     title = models.CharField(max_length=254, default='')
