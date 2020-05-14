@@ -23,13 +23,12 @@
 
 <!---- Content ---->
 
-<div class="col-12"></div>
-<div class="container">
+<div class="container p-0">
     <div class="row login-title">
         <span>VIDEOS</span>
     </div>
     <!---- Photo Categories ---->
-    <div class="categories-menu">
+    <div class="container-fluid categories-menu">
         <a href="{% url 'videos' %}" class="btn category-btn">All Videos</a>
         <a href="{% url 'institutional' %}" class="btn category-btn">Institutional</a>
         <a href="{% url 'video_music' %}" class="btn category-btn">Music</a>
@@ -42,7 +41,7 @@
     <!-- Videos -->
     <div class="row justify-content-center mb-4">
         {% for video in videos %}
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="col-md-6 col-lg-5 p-0" data-aos="fade-up">
             <div class="col-12 video-box">
                 <iframe src="{{ video.videoUrl }}?title=0&byline=0&portrait=0" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen>

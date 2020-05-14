@@ -6,16 +6,15 @@ from .views import (
     studio_view,
     food_view,
     weeding_view,
-    travel_view,
+    drone_view,
+    fineArt_view,
     portfolio,
     all_videos,
     institutional_videos_view,
     shows_videos_view,
     events_videos_view,
     drone_videos_view
-
 )
-
 
 urlpatterns = [
     path("", portfolio, name="portfolio"),
@@ -24,7 +23,8 @@ urlpatterns = [
     path("photos/studio", studio_view, name="studio"),
     path("photos/food", food_view, name="food"),
     path("photos/weeding", weeding_view, name="weeding"),
-    path("photos/travel", travel_view, name="travel"),
+    path("photos/drone", drone_view, name="photo_drone"),
+    path("photos/fineart", fineArt_view, name="fineart"),
     path("videos/", all_videos, name="videos"),
     path("videos/institutional", institutional_videos_view, name="institutional"),
     path("videos/events", events_videos_view, name="events"),

@@ -28,23 +28,27 @@
         <span>PHOTOS</span>
     </div>
     <!---- Photo Categories ---->
-    <div class="categories-menu">
+
+    <!-- Mobile display -->
+
+    <div class="container-fluid categories-menu">
         <a href="{% url 'photos' %}" class="btn category-btn">View all</a>
         <a href="{% url 'music' %}" class="btn category-btn">Music Shows</a>
         <a href="{% url 'studio' %}" class="btn category-btn">Studio</a>
         <a href="{% url 'food' %}" class="btn category-btn">Food</a>
         <a href="{% url 'weeding' %}" class="btn category-btn">Weeding</a>
-        <a href="{% url 'travel' %}" class="btn category-btn">Travel</a>
+        <a href="{% url 'photo_drone' %}" class="btn category-btn">Drone</a>
+        <a href="{% url 'fineart' %}" class="btn category-btn">Fine Art</a>
     </div>
 
-    <!---- End Categories ---->
+    <!---- End Photo Categories ---->
 
     <!-- Photos -->
 
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <div class="row justify-content-center thumbnail mx-2">
+                <div class="row justify-content-center mx-2">
                     {% for photo in photos %}
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 photos-box" data-aos="fade-up">
                         <a href="">

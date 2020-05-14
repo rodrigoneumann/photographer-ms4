@@ -43,12 +43,20 @@ def weeding_view(request):
     )
 
 
-def travel_view(request):
-    photos = Photo.objects.filter(category="Travel")
-    category_name = "Travel"
+def drone_view(request):
+    photos = Photo.objects.filter(category="Drone")
+    category_name = "Drone"
     return render(
         request, "photo.html", {"photos": photos, "category": category_name}
     )
+
+def fineArt_view(request):
+    photos = Photo.objects.filter(category="FineArt")
+    category_name = "Fine Art"
+    return render(
+        request, "photo.html", {"photos": photos, "category": category_name}
+    )
+
 
 #Video gallery Views
 

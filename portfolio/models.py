@@ -8,9 +8,8 @@ class Photo(models.Model):
     ('Studio', 'Studio'),
     ('Food', 'Food'),
     ('Weeding', 'Weeding'),
-    ('Travel', 'Travel'),
-    ('drone', 'Drone'),
-    ('fineArt', 'Fine Art'),
+    ('Drone', 'Drone'),
+    ('FineArt', 'Fine Art'),
     )
 
     title = models.CharField(max_length=254, default='')
@@ -24,7 +23,7 @@ class Photo(models.Model):
 class Video(models.Model):
     CATEGORY_CHOICES = (
     ('institutional', 'Institutional'),
-    ('music', 'Music'),
+    ('videoMusic', 'Music'),
     ('events', 'Events'),
     ('drone', 'Drone'),
     )
