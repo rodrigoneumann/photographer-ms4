@@ -18,9 +18,39 @@
 <!---- Content ---->
 
 <div class="container">
-    <div class="row login-title">
-        <span>PROFESSIONAL SERVICES</span>
+    <div class="row page-title">
+        <span>SERVICES</span>
     </div>
+</div>
+
+<div class="container p-0">
+    <div class="row services-youtube-box">
+        <div class="row services-youtube-title">
+            <span>Youtube Video editing</span>
+        </div>
+        <div class="row services-youtube-description">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem, modi laudantium minima,
+                ex nihil reprehenderit non laborum nobis provident quae eligendi sequi neque et facere quaerat officia
+                maiores saepe.</span>
+        </div>
+        <div class="row col-12 services-plans-box my-3">
+            {% for plan in plans %}
+            <div class="col-12 col-sm-3 plan-card">
+                <div class="services-plan-title">
+                    <span style="text-transform: capitalize;" >{{ plan.type }}</span>
+                </div>
+                <div class="sevices-plan-content-box">
+                    <p>{{ plan.description }}</p>
+                    <!-- Send plan selection parameter for next view -->
+                    <a href="{% url 'payment_page' plan_choice=plan.type %}">
+                        <button type="button" class="btn services-hire-btn">Hire Me</button>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 </div>
 
 {% endblock %}

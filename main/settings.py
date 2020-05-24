@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 import environ
+from django.contrib.messages import constants as messages
 
 env = environ.Env(
     # set casting, default value
@@ -47,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'cart',
     'portfolio',
     'proServices',
     'pages',
@@ -136,7 +136,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -146,9 +145,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
+# Login URL and redirect
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = '/'
 
 #Cryspy template for bootstrap 4 configuration
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -157,8 +157,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Email configuration for Password Reset
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "djangoprojeto@gmail.com"
-EMAIL_HOST_PASSWORD = "motorola78"
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -175,10 +175,24 @@ AWS_S3_REGION_NAME = "eu-west-2"
 AWS_DEFAULT_ACL = None
 AWS_LOCATION = 'static'
 
+# Stripe keys
+STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
+STRIPE_PUBLISHABLE_KEY = env("STRIPE_PUBLISHABLE_KEY")
+STRIPE_SINGLE_JOB_ID = env("STRIPE_SINGLE_JOB_ID")
+STRIPE_PLAN_MONTHLY_ID = env("STRIPE_PLAN_MONTHLY_ID")
+STRIPE_PLAN_WEEKLY_ID = env("STRIPE_PLAN_WEEKLY_ID")
 
+# Files Storage
 DEFAULT_FILE_STORAGE = "main.custom_storage.MediaStorage"
 
 #Development local static files, after project done, send to remote server
 STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
-
+# Message tags to add bootstrap style for alert messages
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}

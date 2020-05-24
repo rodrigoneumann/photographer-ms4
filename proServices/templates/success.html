@@ -2,25 +2,24 @@
 
 {% load static %}
 
-{% block content %}
+{% load crispy_forms_tags %}
 
+{% block content %}
 
 <!---- Breadcrumb ---->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+        <li class="breadcrumb-item" aria-current="page">Professional Services</li>
+        <li class="breadcrumb-item active" aria-current="page">Payment</li>
     </ol>
 </nav>
 <!---- End Breadcrumb ---->
 
-<!---- Alert Messages  ---->
-{% include "partials/messages.html" %}
-<!---- End Alert Messages  ---->
-
 <!---- Content ---->
-
-<div class="container d-flex justify-content-center">
-    <h1>Profile</h1>
+<div class="container">
+    <h2>Sucess</h2>
+    <h3></h3>
 </div>
+
 {% endblock %}
