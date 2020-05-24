@@ -31,8 +31,12 @@
     <form action="{% url 'charge' %}" method="post" id="payment-form">
       {% csrf_token %}
       <div class="col-12">
-        <div class="service-payment-content"><input type="text" name="plan_selected" value="{{ plan.type }}"></div>
-        <div class="service-payment-content"><input type="number" name="plan_price" value="{{ plan.price }}"></div>
+        <div class="service-payment-content">
+          <input type="text" name="plan_selected" value="{{ plan.type }}">
+        </div>
+        <div class="service-payment-content">
+          <input type="number" name="plan_price" value="{{ plan.price }}">
+        </div>
 
         <div class="service-payment-content">
           <input required type="text" name="name" value="{{ user.first_name }} {{ user.last_name }}">
