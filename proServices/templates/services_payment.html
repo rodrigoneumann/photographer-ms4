@@ -16,37 +16,55 @@
 </nav>
 <!---- End Breadcrumb ---->
 
-<!---- Content ---->
 <!-- Stripe CSS -->
 <link rel="stylesheet" href="{% static 'css/stripe.css' %}">
-
 <!-- Stripe JS V3 -->
 <script src="https://js.stripe.com/v3/"></script>
 
-
+<!---- Content ---->
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row payment-title">
+      <span>{{ plan.type }} Payment</span>
+  </div>
+</div>
 
-
+<div class="container-fluid col-11 col-md-8 col-xl-6 login-container">
+  <div class="container form-login px-0 px-md-4 pt-4">
+    <div class="form-group">
+      <span>
+        Please check your personal details and chosen plan, enter your card details and then press the pay now
+        button.</span>
+    </div>
     <form action="{% url 'charge' %}" method="post" id="payment-form">
       {% csrf_token %}
-      <div class="col-12">
-        <div class="service-payment-content">
-          <input type="text" name="plan_selected" value="{{ plan.type }}">
-        </div>
-        <div class="service-payment-content">
-          <input type="number" name="plan_price" value="{{ plan.price }}">
-        </div>
-
-        <div class="service-payment-content">
-          <input required type="text" name="name" value="{{ user.first_name }} {{ user.last_name }}">
-        </div>
-        <div class="service-payment-content">
-          <input required type="text" name="email" value="{{ user.email }}">
-        </div>
+      <label style="color: #adadadb8;">
+        Name
+      </label>
+      <div class="form-group">
+        <input class="textinput form-control" type="text" name="name" value="{{ user.first_name }} {{ user.last_name }}"
+          readonly>
       </div>
-      <div class="form-row">
-        <label for="card-element">
+      <label style="color: #adadadb8;">
+        Email
+      </label>
+      <div class="form-group">
+        <input required class="textinput form-control" type="text" name="email" value="{{ user.email }}" readonly>
+      </div>
+      <label style="color: #adadadb8;">
+        Selected Plan
+      </label>
+      <div class="form-group">
+        <input class="textinput form-control" type="text" name="plan_selected" value="{{ plan.type }}" readonly>
+      </div>
+      <label style="color: #adadadb8;">
+        Price
+      </label>
+      <div class="form-group">
+        <input class="textinput form-control" type="number" name="plan_price" value="{{ plan.price }}" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="card-element" style="color: #adadadb8;">
           Credit or debit card number
         </label>
         <div id="card-element">
@@ -54,17 +72,12 @@
         </div>
 
         <!-- Used to display form errors. -->
-        <div id="card-errors" role="alert"></div>
+        <div class="card-number-error text-center" id="card-errors" role="alert"></div>
       </div>
-
-      <div style="clear:left"></div>
-      <hr>
-
-      <input class="myButton" style="background-color:#10a195" type="submit" value="Submit Payment" name="">
-
+      <div class="mb-4">
+        <input class="pay-now-btn" type="submit" value="PAY NOW" name="">
+      </div>
     </form>
-
-
   </div>
 </div>
 

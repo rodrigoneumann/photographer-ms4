@@ -7,9 +7,9 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 # Create your models here.
 PLAN_CHOICES = (
-    ("single", "Single Job"),
-    ("weekly", "Weekly Plan"),
-    ("monthly", "Monthly Plan"),
+    ("Single Job", "Single Job"),
+    ("Weekly Plan", "Weekly Plan"),
+    ("Monthly Plan", "Monthly Plan"),
 )
 
 

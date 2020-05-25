@@ -9,17 +9,17 @@
   // (Note that this demo uses a wider set of styles than the guide below.)
   var style = {
     base: {
-      color: '#32325d',
-      fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+      color: '#FFF',
+      fontFamily: '"Roboto", sans-serif',
       fontSmoothing: 'antialiased',
-      fontSize: '16px',
+      fontSize: '18px',
       '::placeholder': {
-        color: '#aab7c4'
+        color: '#fffff'
       }
     },
     invalid: {
-      color: '#fa755a',
-      iconColor: '#fa755a'
+      color: '#a30d0dde',
+      iconColor: '#a30d0dde'
     }
   };
 

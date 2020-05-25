@@ -6,6 +6,7 @@ from .forms import RegisterForm
 
 
 def register(request):
+    #check if user is autthenticated
     if request.user.is_authenticated:
         return redirect(reverse("index"))
 

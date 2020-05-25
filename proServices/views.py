@@ -4,9 +4,9 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.urls import reverse
+from django.utils import timezone
 from django.http import JsonResponse
 from .models import VideoEditingPlans, UserEditingPlans
-import datetime
 
 import stripe
 
@@ -25,8 +25,6 @@ stripe.api_key = env("STRIPE_SECRET_KEY")
 def services(request):
 
     plans = VideoEditingPlans.objects.all()
-    date = datetime.datetime.now()
-    print(date)
 
     return render(request, "services.html", {"plans": plans})
 
@@ -51,19 +49,13 @@ def charge(request):
     if request.method == "POST":
         print("Data:", request.POST)
 
-        name = request.POST["name"]
-        email = request.POST["email"]
+        name = request.user.first_name + ' ' + request.user.last_name
+        email = request.user.email
         amount = int(float(request.POST["plan_price"]))
         source = request.POST["stripeToken"]
 
         plan_type = request.POST["plan_selected"]
-        arg_plan_type = plan_type  # args for success page
-        if plan_type == "single":
-            plan_type += " job"
-        else:
-            plan_type += " plan"
-        plan_type.capitalize()
-
+        
         customer = stripe.Customer.create(name=name, email=email, source=source)
 
         stripe.Charge.create(
@@ -73,7 +65,7 @@ def charge(request):
             description=plan_type,
         )
 
-    return redirect("success", plan_type=arg_plan_type)
+    return redirect("success", plan_type=plan_type)
 
 
 @login_required
@@ -84,7 +76,7 @@ def successPage(request, plan_type):
     newCustomerSub = UserEditingPlans(
         user=request.user,
         editing_plan=plan_selection,
-        date_added=datetime.datetime.now(),
+        date_added=timezone.now(),
     )
     newCustomerSub.save()
 
