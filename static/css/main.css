@@ -414,16 +414,17 @@ a:active {
 }
 
 .services-hire-btn {
-    background-color: #2E2E2E;
+    background-color: #a30d0dde;
     color: #ffffffde;
     margin: 7px 0 7px 0;
-    border: 1px solid #8f8f8f;
+    border: 1px solid rgba(253, 128, 128, 0.5);
     padding: 0.20rem 0.60rem
 }
 
 .services-hire-btn:hover {
-    background-color: #a30d0dde;
+    background-color: #c71010de;
     color: #ffffffde;
+    border-color: #622121a8;
     transition: .15s ease-in-out;
 }
 
@@ -490,7 +491,7 @@ a:active {
     background-color: #a30d0dde;
     border: 1px solid rgba(253, 128, 128, 0.5);
     width: 100%;
-    border-radius: 7px;
+    border-radius: 4px;
     height: auto;
     padding: 0.5rem 0;
     font-size: 1.2rem;
@@ -521,7 +522,7 @@ a:active {
     background-color: #a30d0dde;
     border: 1px solid rgba(253, 128, 128, 0.5);
     width: 100%;
-    border-radius: 7px;
+    border-radius: 4px;
     height: auto;
     padding: 0.3rem 0;
     font-size: 1rem;

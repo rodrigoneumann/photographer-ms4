@@ -24,13 +24,13 @@
 <!---- Content ---->
 <div class="container">
   <div class="row payment-title">
-      <span>{{ plan.type }} Payment</span>
+    <span>{{ plan.type }} Payment</span>
   </div>
 </div>
 
 <div class="container-fluid col-11 col-md-8 col-xl-6 login-container">
   <div class="container form-login px-0 px-md-4 pt-4">
-    <div class="form-group">
+    <div class="form-group text-center">
       <span>
         Please check your personal details and chosen plan, enter your card details and then press the pay now
         button.</span>
@@ -57,7 +57,7 @@
         <input class="textinput form-control" type="text" name="plan_selected" value="{{ plan.type }}" readonly>
       </div>
       <label style="color: #adadadb8;">
-        Price
+        Price £
       </label>
       <div class="form-group">
         <input class="textinput form-control" type="number" name="plan_price" value="{{ plan.price }}" readonly>
@@ -74,10 +74,15 @@
         <!-- Used to display form errors. -->
         <div class="card-number-error text-center" id="card-errors" role="alert"></div>
       </div>
-      <div class="mb-4">
+      <div class="col-12 p-0">
         <input class="pay-now-btn" type="submit" value="PAY NOW" name="">
       </div>
     </form>
+    <div class="row p-0 m-0 my-3 justify-content-end">
+      <a href="{% url 'services' %}">
+        <button class="btn category-btn m-0" type="button">Cancel</button>
+      </a>
+    </div>
   </div>
 </div>
 
