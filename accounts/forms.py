@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 class RegisterForm(UserCreationForm):
@@ -24,3 +24,17 @@ class RegisterForm(UserCreationForm):
             "password1",
             "password2",
         ]
+
+class EditProfileForm(UserChangeForm):
+    #exclude password field
+    password = None
+
+    #User profile fields to display
+    class Meta:
+        model = User
+        fields = [
+            "first_name",
+            "last_name",
+            "email",
+        ]
+        

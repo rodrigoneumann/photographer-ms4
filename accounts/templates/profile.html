@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 
@@ -9,7 +11,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+        <li class="breadcrumb-item active" aria-current="page">User Profile</li>
     </ol>
 </nav>
 <!---- End Breadcrumb ---->
@@ -20,7 +22,71 @@
 
 <!---- Content ---->
 
-<div class="container d-flex justify-content-center">
-    <h1>Profile</h1>
+<div class="container">
+    <div class="row page-title">
+        <span>User Profile</span>
+    </div>
 </div>
+
+<div class="container-fluid col-11 col-md-8 col-xl-6 login-container">
+    <div class="container form-login px-0 px-md-4 pt-4">
+        <label class="profile-label">
+            Username
+        </label>
+        <div class="form-group">
+            <div class="textinput form-control" style="text-transform: uppercase;">{{ request.user }}</div>
+        </div>
+        <label class="profile-label">
+            Fist Name
+        </label>
+        <div class="form-group">
+            <div class="textinput form-control" style="text-transform: uppercase;">{{ request.user.first_name }}</div>
+        </div>
+        <label class="profile-label">
+            Last Name
+        </label>
+        <div class="form-group">
+            <div class="textinput form-control" style="text-transform: uppercase;">{{ request.user.last_name }}</div>
+        </div>
+        <label class="profile-label">
+            Email
+        </label>
+        <div class="form-group">
+            <div class="textinput form-control" style="text-transform: uppercase;">{{ request.user.email }}</div>
+        </div>
+
+        {% if subscription %}
+        <label class="profile-label">
+            Subscription Plan
+        </label>
+        <div class="row form-group m-0">
+            <div class="textinput form-control col-3 text-center" style="text-transform: uppercase;">active</div>
+            <div class="textinput form-control col-9 text-center" style="text-transform: uppercase;">{{ plan }}</div>
+        </div>
+        {% endif %}
+
+        <div class="row profile-button-box mt-4">
+            <div class="col-12 p-0 mx-0 mb-3">
+                <a href="{% url 'edit_profile' %}">
+                    <button class="profile-btn" type="button">EDIT PROFILE</button>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 p-0 pr-sm-2 mb-3">
+                <a href="{% url 'password_reset' %}">
+                    <button class="profile-btn" type="button">RESET PASSWORD</button>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 p-0 pl-sm-2 mb-3">
+                <a href="{% url 'index' %}">
+                    <button class="profile-btn" type="button">BACK TO MAIN</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
 {% endblock %}

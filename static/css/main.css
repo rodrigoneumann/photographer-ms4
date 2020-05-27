@@ -232,10 +232,10 @@ a:active {
 
 .form-control {
     border: 2px solid rgba(255, 255, 255, .2);
-    height: 45px;
     background: 0 0 !important;
     color: #fff !important;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 0.8rem;
 }
 
 .form-control:focus {
@@ -418,7 +418,7 @@ a:active {
     color: #ffffffde;
     margin: 7px 0 7px 0;
     border: 1px solid #8f8f8f;
-    padding: 0.30rem 0.60rem
+    padding: 0.20rem 0.60rem
 }
 
 .services-hire-btn:hover {
@@ -428,7 +428,6 @@ a:active {
 }
 
 .services-photo-title {
-    background-color: blanchedalmond;
     justify-content: center;
     background-color: #292929;
     font-size: 1.5rem;
@@ -506,8 +505,41 @@ a:active {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-
 /*---- End Professional Services ----*/
+
+/*---- Profile ----*/
+.profile-label {
+    color: #ffffffde;
+}
+
+.profile-button-box {
+    margin: 1rem 0 0.5rem 0;
+
+}
+
+.profile-btn {
+    background-color: #a30d0dde;
+    border: 1px solid rgba(253, 128, 128, 0.5);
+    width: 100%;
+    border-radius: 7px;
+    height: auto;
+    padding: 0.3rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff !important;
+}
+
+.profile-btn:hover {
+    background-color: #c71010de;
+    color: #ffffffde;
+    transition: .15s ease-in-out;
+    border-color: #d6d6d6;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+/*---- End Profile ----*/
+
+
 
 
 /*---- Footer ----*/
