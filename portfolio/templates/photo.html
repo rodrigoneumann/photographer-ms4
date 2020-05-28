@@ -51,7 +51,8 @@
                 <div class="row justify-content-center mx-2">
                     {% for photo in photos %}
                     <div data-aos="fade-up" class="col-12 col-sm-6 col-md-4 col-lg-3 photos-box photo-gallery">
-                        <a href="{{ photo.image.url }}">
+                        <a href="{{ photo.image.url }}" title="{{ photo.title }} {{ photo.description }}"
+                            data-caption="{{ photo.description }}">
                             <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
                         </a>
                     </div>
