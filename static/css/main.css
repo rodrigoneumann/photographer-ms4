@@ -279,11 +279,6 @@ a:active {
     color: #ffffffde;
 }
 
-.gallery>img {
-    width: 100%;
-    height: 100%;
-}
-
 .portfolio-selection {
     position: relative;
     width: 100%;
@@ -333,9 +328,14 @@ a:active {
 
 /* End Portfolio css title animation  */
 
+.photo-gallery img {
+    width: 100%;
+    height: 100%;
+}
+
 .photos-box {
-    margin: 0 1rem 2rem 1rem;
     padding: 0;
+    margin: 10px;
 }
 
 .photos-box:hover {

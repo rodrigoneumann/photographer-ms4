@@ -5,4 +5,11 @@ $(document).ready(function () {
         $(this).alert('close');
     });
 
+    /* Magnifc Popup */
+    $('.photo-gallery').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        gallery:{enabled:true}
+      });
+
 });
