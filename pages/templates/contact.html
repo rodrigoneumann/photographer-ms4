@@ -15,12 +15,24 @@
 </nav>
 <!---- End Breadcrumb ---->
 
+<!---- Alert Messages  ---->
+{% include "partials/messages.html" %}
+<!---- End Alert Messages  ---->
+
 <!---- Content ---->
 
 <div class="container">
     <div class="row login-title">
         <span>CONTACT ME</span>
     </div>
+</div>
+
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button type="submit" class="btn profile-btn" aria-label="Submit">Submit</button>
+    </form>
 </div>
 
 {% endblock %}

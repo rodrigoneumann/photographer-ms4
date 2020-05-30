@@ -49,7 +49,7 @@ def charge(request):
     if request.method == "POST":
         print("Data:", request.POST)
 
-        name = request.user.first_name + ' ' + request.user.last_name
+        name = request.user.get_full_name
         email = request.user.email
         amount = int(float(request.POST["plan_price"]))
         source = request.POST["stripeToken"]

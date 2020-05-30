@@ -337,15 +337,20 @@ a:active {
 /* Magnific Popup setup */
 .mfp-title {
     text-align: center !important;
-    padding: none !important;
+    padding: 0 10px 0 10px !important;
     line-height: 40px !important;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     background-color: #000000d5;
 }
 
 .mfp-bottom-bar {
     margin-top: -40px !important;
 }
+
+.mfp-counter {
+    display: none !important;
+}
+
 /* End Magnific Popup setup */
 
 .photos-box {
