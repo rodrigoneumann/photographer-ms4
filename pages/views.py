@@ -23,9 +23,9 @@ def contact(request):
             message = request.POST["message"]
             send_mail(
                 subject,
-                "From: " + name + "\nEmail: " + email + "\nMessage: " + message,
+                "From: " + name + "\n\nEmail: " + email + "\n\nMessage: " + message,
                 email,
-                ["paoloproducoes@gmail.com"],
+                ["rodrigoneumann@gmail.com"],
                 fail_silently=False,
             )
             messages.success(

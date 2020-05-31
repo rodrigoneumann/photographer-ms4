@@ -30,25 +30,25 @@
 
 <div class="container-fluid col-11 col-md-8 col-xl-6 login-container">
     <div class="container form-login px-0 px-md-4 pt-4">
-        <label class="profile-label">
+        <label>
             Username
         </label>
         <div class="form-group">
             <div class="textinput form-control" style="text-transform: uppercase;">{{ request.user }}</div>
         </div>
-        <label class="profile-label">
+        <label>
             Fist Name
         </label>
         <div class="form-group">
             <div class="textinput form-control" style="text-transform: uppercase;">{{ request.user.first_name }}</div>
         </div>
-        <label class="profile-label">
+        <label>
             Last Name
         </label>
         <div class="form-group">
             <div class="textinput form-control" style="text-transform: uppercase;">{{ request.user.last_name }}</div>
         </div>
-        <label class="profile-label">
+        <label>
             Email
         </label>
         <div class="form-group">
@@ -56,7 +56,7 @@
         </div>
 
         {% if subscription %}
-        <label class="profile-label">
+        <label>
             Subscription Plan
         </label>
         <div class="row form-group m-0">
