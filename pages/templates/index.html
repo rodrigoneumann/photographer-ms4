@@ -62,82 +62,79 @@
 <!---- End Portfolio ---->
 
 <!---- About Me ---->
-<div class="row page-title">
-    <span>ABOUT ME</span>
-</div>
-
 <div class="index-about">
+    <div class="row page-title">
+        <span>ABOUT ME</span>
+    </div>
     <div class="row justify-content-center mx-0">
-        <div class="col-12 col-sm-6 p-0">
-            <div class="index-about-image">
-                <img class="portfolio-selection-image"
-                    src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/aboutme.jpg"
-                    alt="Paollo Martinelli">
-            </div>
-
-        </div>
-        <div class="col-12 col-md-6">
-            <div class="index-about-description">
-                <h2>Paolo Martinelli</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda delectus
-                    laudantium explicabo saepe ducimus? Quis commodi tenetur perferendis quaerat ad.
-                    Doloremque mollitia excepturi illo nostrum possimus, ex tempore quasi a.</p>
+        <div class="col-12 col-sm-6 p-0 index-about-image"></div>
+        <div class="col-12 col-sm-6 index-about-text">
+            <div class="col-12 p-0">
+                <div class="col-12 index-about-title">Paolo Martinelli</div>
+                <div class="index-about-description">
+                    <p>I am Paolo Martinelli, Brazilian photographer, born in São Paulo and currently living in
+                        Salvador.</p>
+                    <p>
+                        My work in the world of photography and audio-visual has taken me to horizons that I never
+                        imagined
+                        reaching. I have had work experiences in all states of Brazil, Argentina, Uruguay, Sweden,
+                        Switzerland and Denmark, whether photographing or recording, I had the opportunity to
+                        explore
+                        countless situations that taught me even more about the world, people, different cultures,
+                        and a
+                        way
+                        of looking at life.</p>
+                </div>
                 <a href="{% url 'about'%}">
-                    <div class="index-about-button mt-1">
-                        <button type="button" class="btn category-btn">Read more about me</button>
+                    <div class="col-10 col-lg-6 col-xl-5 index-about-button">
+                        <button type="button" class="profile-btn">Read more about me</button>
+                    </div>
                 </a>
             </div>
         </div>
     </div>
 </div>
 
+
 <!---- End About Me ---->
 
 <!---- Services ---->
 
-<div class="container index-services">
-    <div class="row page-title">
+<div class="index-services">
+    <div class="row index-services-title">
         <span>SERVICES</span>
     </div>
-
-    <div class="index-about-description">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda delectus
-            laudantium explicabo saepe ducimus? Quis commodi tenetur perferendis quaerat ad.
-            Doloremque mollitia excepturi illo nostrum possimus, ex tempore quasi a.</p>
-        <ul>
-            <li>
-                Youtube Video Editing
-            </li>
-
-            <li>
-                Photo editing services
-            </li>
-
-            <li>
-                Institutional video editing
-            </li>
-        </ul>
+    <div class="container index-services-content">
+        <div class="col-12 col-sm-10 index-services-description">
+            <p>If you need photo or video coverage for your event, we can offer you the best package to make your event
+                unforgettable.</p>
+            <p>In addition I provide professional video editing service for youtubers and photo editing service on
+                demand.
+            </p>
+            <div class="row index-services-icons">
+                <ul class="list-inline col-10 col-sm-12 p-0">
+                    <li class="list-inline-item">
+                        <i class=" fab fa-youtube"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="list-inline-item  fas fa-camera-retro"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="list-inline-item fas fa-film"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="list-inline-item far fa-image"></i>
+                    </li>
+                </ul>
+            </div>
+            <p style="text-align: center;">Click on the button below to learn more about it.</p>
+        </div>
+        <a href="{% url 'services'%}">
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 index-services-button">
+                <button type="button" class="profile-btn">Hire my services</button>
+            </div>
+        </a>
     </div>
-    <div class="row index-services-icons">
-        <ul class="list-inline col-10 col-sm-12 p-0">
-            <li class="list-inline-item">
-                <i class=" fab fa-youtube"></i>
-            </li>
-            <li class="list-inline-item">
-                <i class="list-inline-item  fas fa-camera-retro"></i>
-            </li>
-            <li class="list-inline-item">
-                <i class="list-inline-item fas fa-film"></i>
-            </li>
-            <li class="list-inline-item">
-                <i class="list-inline-item far fa-image"></i>
-            </li>
-        </ul>
-    </div>
-    <a href="{% url 'services'%}">
-        <div class="col-12 index-services-button mt-1">
-            <button type="button" class="btn category-btn">Hire my services</button>
-    </a>
 </div>
 
 
