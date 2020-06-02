@@ -23,10 +23,15 @@ stripe.api_key = env("STRIPE_SECRET_KEY")
 
 
 def services(request):
+    single = VideoEditingPlans.objects.get(type="Single Job")
+    weekly = VideoEditingPlans.objects.get(type="Weekly Plan")
+    monthly = VideoEditingPlans.objects.get(type="Monthly Plan")
 
-    plans = VideoEditingPlans.objects.all()
-
-    return render(request, "services.html", {"plans": plans})
+    return render(
+        request,
+        "services.html",
+        {"single": single, "weekly": weekly, "monthly": monthly},
+    )
 
 
 @login_required
@@ -55,7 +60,7 @@ def charge(request):
         source = request.POST["stripeToken"]
 
         plan_type = request.POST["plan_selected"]
-        
+
         customer = stripe.Customer.create(name=name, email=email, source=source)
 
         stripe.Charge.create(
@@ -74,9 +79,7 @@ def successPage(request, plan_type):
     # Get Stripe payment confirmation and save Subscription information into DB
     plan_selection = VideoEditingPlans.objects.get(type=plan_type)
     newCustomerSub = UserEditingPlans(
-        user=request.user,
-        editing_plan=plan_selection,
-        date_added=timezone.now(),
+        user=request.user, editing_plan=plan_selection, date_added=timezone.now(),
     )
     newCustomerSub.save()
 

@@ -170,8 +170,6 @@ label {
     padding-bottom: 1rem;
 }
 
-
-
 /* End Index - About-me */
 
 /* Index - Services */
@@ -451,11 +449,23 @@ label {
 }
 
 .services-youtube-title {
+    justify-content: center;
     text-align: center;
-    background-color: #292929;
-    font-size: 1.5rem;
-    margin: 1.5rem auto 0.5rem auto;
+    background-color: #2e2e2e;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 4rem;
+    margin: 1rem auto 0 auto;
     height: auto;
+}
+
+.services-youtube-image {
+    background-image: url("https://photographer-static.s3.eu-west-2.amazonaws.com/media/edicao.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    height: 300px;
 }
 
 .services-youtube-description {
@@ -469,11 +479,12 @@ label {
     justify-content: center;
     margin: 0;
     height: auto;
+    
 }
 
 .plan-card {
     text-align: center;
-    background-color: #2f2f2f;
+    background-color: #363636;
     margin: 1rem;
     padding: 0 0.5rem 0.5rem 0.5rem;
     border-radius: 7px;
@@ -494,25 +505,39 @@ label {
 
 }
 
-.sevices-plan-content-box {
+.services-plan-content-box {
     background-color: #ffffffd8;
     color: black;
-    padding: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+}
+
+.services-content-price {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
 }
 
 .services-hire-btn {
     background-color: #a30d0dde;
-    color: #ffffffde;
-    margin: 7px 0 7px 0;
     border: 1px solid rgba(253, 128, 128, 0.5);
-    padding: 0.20rem 0.60rem
+    border-radius: 4px;
+    height: auto;
+    padding: 0.3rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff !important;
 }
 
 .services-hire-btn:hover {
     background-color: #c71010de;
     color: #ffffffde;
-    border-color: #622121a8;
     transition: .15s ease-in-out;
+    border-color: #d6d6d6;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .services-photo-title {
@@ -521,6 +546,10 @@ label {
     font-size: 1.5rem;
     margin: 1.5rem auto 0.5rem auto;
     height: auto;
+}
+
+.photo-editing-img {
+    background-image: url();
 }
 
 .payment-title {
@@ -644,9 +673,9 @@ label {
 
 .contact-image {
     background-image: url("https://photographer-static.s3.eu-west-2.amazonaws.com/media/computer1.jpg");
-    background-size: cover;
+    background-size: contain;
     padding: 0;
-    height: 300px;
+    height: auto;
 }
 
 /*---- Footer ----*/
@@ -741,10 +770,6 @@ footer {
     .logo-martinelli {
         font-size: 4rem;
     }
-
-    .services-youtube-box {
-        border: 1px solid #8f8f8f;
-    }
 }
 
 @media (min-width: 768px) {
@@ -798,6 +823,10 @@ footer {
 
     .index-services-description {
         font-size: 1rem;
+    }
+
+    .services-youtube-image {
+        height: 500px;
     }
 
     .payment-title {

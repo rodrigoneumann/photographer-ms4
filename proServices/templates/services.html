@@ -23,39 +23,83 @@
     </div>
 </div>
 
-<div class="container p-0 mb-5">
-    <div class="row services-youtube-box">
-        <div class="row services-youtube-title">
-            <span>Youtube Video editing</span>
-        </div>
-        <div class="row services-youtube-description">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem, modi laudantium minima,
-                ex nihil reprehenderit non laborum nobis provident quae eligendi sequi neque et facere quaerat officia
-                maiores saepe.</span>
-        </div>
-        <div class="row col-12 services-plans-box my-3">
-            {% for plan in plans %}
-            <div class="col-12 col-sm-3 plan-card">
-                <div class="services-plan-title">
-                    <span style="text-transform: capitalize;">{{ plan.type }}</span>
-                </div>
-                <div class="sevices-plan-content-box">
-                    <p>{{ plan.description }}</p>
-                    <!-- Send plan selection parameter for next view -->
-                    <a href="{% url 'payment_page' plan_choice=plan.type %}">
-                        <button type="button" class="btn services-hire-btn">Hire Me</button>
-                    </a>
-                </div>
+<div class="row services-youtube-box">
+    <div class="row col-12 services-youtube-title">
+        <span>YOUTUBE VIDEO EDITING</span>
+    </div>
+    <div class="col-12 services-youtube-image"></div>
+    <div class="row col-12 col-sm-10 services-youtube-description">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem, modi laudantium minima,
+            ex nihil reprehenderit non laborum nobis provident quae eligendi sequi neque et facere quaerat officia
+            maiores saepe.</span>
+    </div>
+    <div class="row col-12 services-plans-box">
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 plan-card">
+            <div class="services-plan-title">
+                <span>{{ single.type }}</span>
             </div>
-            {% endfor %}
+            <div class="services-plan-content-box">
+                <p>1 YouTube professional video editing job</p>
+                <p>Royalty-free image and video Stock</p>
+                <p>Videos Thumbnail</p>
+                <p>Up to 2 changes at no extra cost per video</p>
+                <p>Possibility of support and tips on Google AdSense for a extra fee</p>
+                <p>One time fee</p>
+                <div class="services-content-price">Price £{{ single.price }}</div>
+                <!-- Send plan selection parameter for next view -->
+                <a href="{% url 'payment_page' plan_choice='Single Job' %}">
+                    <button type="button" class="services-hire-btn">Hire Me</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 plan-card">
+            <div class="services-plan-title">
+                <span>{{ weekly.type}}</span>
+            </div>
+            <div class="services-plan-content-box">
+                <p>Up to 3 YouTube videos edited per week</p>
+                <p>Royalty-free image and video Stock</p>
+                <p>Videos Thumbnails</p>
+                <p>Up to 3 changes at no extra cost per video</p>
+                <p>Support and tips for Google AdSense</p>
+                <p>No contract (Cancel anytime)</p>
+                <div class="services-content-price">Price £{{ weekly.price }}</div>
+                <!-- Send plan selection parameter for next view -->
+                <a href="{% url 'payment_page' plan_choice='Weekly Plan' %}">
+                    <button type="button" class="services-hire-btn">Hire Me</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 plan-card">
+            <div class="services-plan-title">
+                <span>{{ monthly.type }}</span>
+            </div>
+            <div class="services-plan-content-box">
+                <p>Up to 20 YouTube videos edited per month</p>
+                <p>Royalty-free image and video Stock</p>
+                <p>Videos Thumbnails</p>
+                <p>Up to 3 changes at no extra cost per video</p>
+                <p>Support and tips for Google AdSense</p>
+                <p>No contract ( Cancel anytime)</p>
+                <div class="services-content-price">Price £{{ monthly.price }}</div>
+                <!-- Send plan selection parameter for next view -->
+                <a href="{% url 'payment_page' plan_choice='Monthly Plan' %}">
+                    <button type="button" class="services-hire-btn">Hire Me</button>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<div class="container-fluid">
-    <div class="row services-photo-title">
-        <span>Photo Editing</span>
+    <div class="row col-12 services-youtube-title">
+        <span>Professional Photo editing</span>
+    </div>
+    <div class="photo-editing img"></div>
+    <div class="row col-12 col-sm-10 services-youtube-description">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem, modi laudantium minima,
+            ex nihil reprehenderit non laborum nobis provident quae eligendi sequi neque et facere quaerat officia
+            maiores saepe.</span>
     </div>
 </div>
+
 
 
 

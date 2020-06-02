@@ -15,7 +15,6 @@ PLAN_CHOICES = (
 
 class VideoEditingPlans(models.Model):
     type = models.CharField(max_length=18, choices=PLAN_CHOICES)
-    description = models.TextField(max_length=200)
     price = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
