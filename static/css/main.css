@@ -673,9 +673,14 @@ label {
 
 .contact-image {
     background-image: url("https://photographer-static.s3.eu-west-2.amazonaws.com/media/computer1.jpg");
-    background-size: contain;
+    background-size: cover;
     padding: 0;
-    height: auto;
+    height: 300px;
+}
+
+.contact-image img {
+    width: 100%;
+    object-fit: cover;
 }
 
 /*---- Footer ----*/
@@ -770,6 +775,18 @@ footer {
     .logo-martinelli {
         font-size: 4rem;
     }
+
+    .contact-image {
+        height: auto;
+        border: 1px solid #8f8f8f;
+        border-right: 0;
+        border-radius: 7px 0 0 7px;
+    }
+
+    .contact-form-box {
+        border: 1px solid #8f8f8f;
+        border-radius: 0 7px 7px 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -833,17 +850,6 @@ footer {
         font-size: 2rem;
     }
 
-    .contact-image {
-        height: auto;
-        border: 1px solid #8f8f8f;
-        border-right: 0;
-        border-radius: 7px 0 0 7px;
-    }
-
-    .contact-form-box {
-        border: 1px solid #8f8f8f;
-        border-radius: 0 7px 7px 0;
-    }
 
 }
 
