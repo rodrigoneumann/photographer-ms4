@@ -456,7 +456,7 @@ label {
     font-weight: 300;
     font-size: 1.3rem;
     line-height: 4rem;
-    margin: 1rem auto 0 auto;
+    margin: 0.5rem auto 0 auto;
     height: auto;
 }
 
@@ -469,7 +469,7 @@ label {
 }
 
 .services-youtube-description {
-    text-align: center;
+    text-align: justify;
     width: 100%;
     margin: 1rem;
     height: auto;
