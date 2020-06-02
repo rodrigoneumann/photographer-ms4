@@ -23,19 +23,18 @@
     </div>
 </div>
 <div class="container-fluid col-11 col-md-8 col-lg-6 col-xl-5 login-container">
-    <div class="container form-login px-4 pt-4">
+    <div class="container px-2 pt-4">
         <form method="POST">
             {% csrf_token %}
 
             {{ form|crispy }}
 
-            <div class="register-button my-3">
-                <button type="submit" class="btn btn-sm btn-register"><i class="fas fa-sign-in-alt fa-sm"></i>
-                    Register</button>
+            <div class="col-11 col-sm-10 my-4 mx-auto">
+                <button type="submit" class="profile-btn"><i class="fas fa-sign-in-alt fa-sm"></i> Register</button>
             </div>
 
             <div class="d-flex justify-content-center mb-4">
-                <span>Already have an account? <a href="{% url 'login' %}"><strong>Click
+                <span class="register-text-bottom">Already have an account? <a href="{% url 'login' %}"><strong>Click
                             here to login</strong></a></span>
             </div>
         </form>
