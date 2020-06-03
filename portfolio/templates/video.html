@@ -11,12 +11,8 @@
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
-        {% if category %}
-        <li class="breadcrumb-item"><a href="{% url 'videos' %}">Videos</li></a>
+        <li class="breadcrumb-item"><a href="{% url 'video_music' %}">Videos</li></a>
         <li class="breadcrumb-item active">{{ category }}</li>
-        {% else %}
-        <li class="breadcrumb-item active">All Videos</li>
-        {% endif %}
     </ol>
 </nav>
 <!---- End Breadcrumb ---->
@@ -29,9 +25,8 @@
     </div>
     <!---- Photo Categories ---->
     <div class="container-fluid categories-menu">
-        <a href="{% url 'videos' %}" class="btn category-btn">All Videos</a>
-        <a href="{% url 'institutional' %}" class="btn category-btn">Institutional</a>
         <a href="{% url 'video_music' %}" class="btn category-btn">Music</a>
+        <a href="{% url 'institutional' %}" class="btn category-btn">Institutional</a>
         <a href="{% url 'events' %}" class="btn category-btn">Events</a>
         <a href="{% url 'drone' %}" class="btn category-btn">Drone</a>
     </div>

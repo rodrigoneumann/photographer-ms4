@@ -6,10 +6,6 @@ def portfolio(request):
     return render(request, "portfolio.html")
 
 #Photo Gallery Views
-def all_photos(request):
-    photos = Photo.objects.all()
-    return render(request, "photo.html", {"photos": photos})
-
 
 def music_view(request):
     photos = Photo.objects.filter(category="Music")
@@ -59,11 +55,6 @@ def fineArt_view(request):
 
 
 #Video gallery Views
-
-def all_videos(request):
-    videos = Video.objects.all()
-    return render(request, "video.html", {"videos": videos})
-
 
 def institutional_videos_view(request):
     videos = Video.objects.filter(category="institutional")

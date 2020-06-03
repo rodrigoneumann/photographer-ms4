@@ -11,12 +11,8 @@
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
-        {% if category %}
-        <li class="breadcrumb-item"><a href="{% url 'photos' %}">Photos</li></a>
+        <li class="breadcrumb-item"><a href="{% url 'music' %}">Photos</li></a>
         <li class="breadcrumb-item active">{{ category }}</li>
-        {% else %}
-        <li class="breadcrumb-item active">All Photos</li>
-        {% endif %}
     </ol>
 </nav>
 <!---- End Breadcrumb ---->
@@ -32,7 +28,6 @@
     <!-- Mobile display -->
 
     <div class="container-fluid categories-menu">
-        <a href="{% url 'photos' %}" class="btn category-btn">View all</a>
         <a href="{% url 'music' %}" class="btn category-btn">Music Shows</a>
         <a href="{% url 'studio' %}" class="btn category-btn">Studio</a>
         <a href="{% url 'food' %}" class="btn category-btn">Food</a>
