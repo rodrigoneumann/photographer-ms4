@@ -41,7 +41,7 @@ label {
 
 .breadcrumb-style {
     background-color: #2E2E2E;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0;
 }
 
@@ -472,6 +472,7 @@ label {
     text-align: justify;
     width: 100%;
     margin: 1rem;
+    padding: 1rem 0;
     height: auto;
 }
 
@@ -479,7 +480,7 @@ label {
     justify-content: center;
     margin: 0;
     height: auto;
-    
+    margin-bottom: 1rem;    
 }
 
 .plan-card {
@@ -548,8 +549,15 @@ label {
     height: auto;
 }
 
-.photo-editing-img {
-    background-image: url();
+.services-form-box {
+    color: #ffffffde;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #2E2E2E;
+}
+
+.services-form-btn {
+    margin: 1.5rem auto 0 auto;
 }
 
 .payment-title {
@@ -776,6 +784,11 @@ footer {
         font-size: 4rem;
     }
 
+    .services-form-box {
+        border: 1px solid #8f8f8f;
+        border-radius: 7px;
+    }
+
     .contact-image {
         height: auto;
         border: 1px solid #8f8f8f;
@@ -787,6 +800,11 @@ footer {
         border: 1px solid #8f8f8f;
         border-radius: 0 7px 7px 0;
     }
+
+    .plan-card {
+        border: 1px solid #8f8f8f;
+    }
+
 }
 
 @media (min-width: 768px) {

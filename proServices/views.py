@@ -4,9 +4,11 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.urls import reverse
+from django.core.mail import send_mail
 from django.utils import timezone
 from django.http import JsonResponse
 from .models import VideoEditingPlans, UserEditingPlans
+from .forms import PhotoQuoteForm
 
 import stripe
 
@@ -27,10 +29,53 @@ def services(request):
     weekly = VideoEditingPlans.objects.get(type="Weekly Plan")
     monthly = VideoEditingPlans.objects.get(type="Monthly Plan")
 
+    photo_quote_form = PhotoQuoteForm()
+
+    if request.method == "POST":
+        photo_quote_form = PhotoQuoteForm(request.POST)
+        if photo_quote_form.is_valid():
+            name = request.POST["name"]
+            email = request.POST["email"]
+            subject = request.POST["subject"]
+            photoService = request.POST.getlist("photoService")
+            
+            services = ''
+            for i in photoService:
+                if i == photoService[-1]:
+                    services += i
+                else:
+                    services += f'{i}, '
+            
+            print(photoService)
+            message = request.POST["message"]
+            send_mail(
+                subject,
+                "From: "
+                + name
+                + "\n\nEmail: "
+                + email
+                + "\n\nType of Service: "
+                + services
+                + "\n\nMessage: "
+                + message,
+                email,
+                ["rodrigoneumann@gmail.com"],
+                fail_silently=False,
+            )
+            messages.success(
+                request, "Your message was sent successfully, many Thanks!"
+            )
+            return redirect("services")
+
     return render(
         request,
         "services.html",
-        {"single": single, "weekly": weekly, "monthly": monthly},
+        {
+            "single": single,
+            "weekly": weekly,
+            "monthly": monthly,
+            "form": photo_quote_form,
+        },
     )
 
 
