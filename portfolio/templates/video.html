@@ -41,13 +41,13 @@
     <!-- Videos -->
     <div class="row justify-content-center mb-4">
         {% for video in videos %}
-        <div class="col-md-6 col-lg-5 p-0" data-aos="fade-up">
-            <div class="col-12 video-box">
+        <div class="col-md-6 col-lg-4 p-0" data-aos="fade-up">
+            <div class="embed-container">
                 <iframe src="{{ video.videoUrl }}?title=0&byline=0&portrait=0" frameborder="0"
                     allow="autoplay; fullscreen" allowfullscreen>
                 </iframe>
-                <div class="row justify-content-center pt-2 pb-2">{{ video.title }}</div>
             </div>
+            <div class="row col-10 video-title">{{ video.title }}</div>
         </div>
         {% endfor %}
     </div>

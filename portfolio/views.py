@@ -73,7 +73,7 @@ def institutional_videos_view(request):
     )
 
 def shows_videos_view(request):
-    videos = Video.objects.filter(category="music")
+    videos = Video.objects.filter(category="videoMusic")
     category_name = "Music"
     return render(
         request, "video.html", {"videos": videos, "category": category_name}

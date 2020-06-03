@@ -433,7 +433,35 @@ label {
 
 .video-box {
     text-align: center;
-    padding: 2rem 0 0 0;
+    justify-content: center;
+    padding: 1.5rem 0 0 0;
+}
+
+.video-title {
+    vertical-align: bottom;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0.5rem auto 2rem auto;
+    padding: 0;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /*---- End Portfolio ----*/
@@ -480,7 +508,7 @@ label {
     justify-content: center;
     margin: 0;
     height: auto;
-    margin-bottom: 1rem;    
+    margin-bottom: 1rem;
 }
 
 .plan-card {
@@ -782,6 +810,14 @@ footer {
 
     .logo-martinelli {
         font-size: 4rem;
+    }
+
+    .embed-container {
+        margin: 0 1rem;
+    }
+
+    .video-title {
+        margin: 0 auto 1rem auto;
     }
 
     .services-form-box {
