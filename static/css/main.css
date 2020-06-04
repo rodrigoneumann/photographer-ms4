@@ -998,7 +998,22 @@ footer {
     .payment-title {
         font-size: 2rem;
     }
+    
+    .footer-logo-paolo {
+        font-size: 1.5rem;
+    }
 
+    .footer-logo-martinelli {
+        font-size: 1.5rem;
+    }
+
+    .footer-list {
+        font-size: 38px;
+    }
+
+    .footer-copyright {
+        font-size: 1rem;
+    }
 
 }
 
