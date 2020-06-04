@@ -146,16 +146,16 @@ label {
     text-align: center;
     font-size: 1.3rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 1.5rem;
 }
 
 .index-about-description {
-    font-size: 0.8rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    text-align: left;
-    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: justify;
+    padding-top: 1rem;
 }
 
 .index-about-button {
@@ -206,10 +206,11 @@ label {
 }
 
 .index-services-description {
-    font-size: 0.8rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    text-align: left;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: justify;
+    padding-top: 1rem;
     margin: 1rem auto 0 auto;
     padding: 0;
 }
@@ -497,7 +498,11 @@ label {
 }
 
 .services-youtube-description {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
     text-align: justify;
+    padding-top: 1rem;
     width: 100%;
     margin: 1rem;
     padding: 1rem 0;
@@ -740,7 +745,11 @@ label {
 }
 
 .contact-form-title {
+    font-family: "Roboto", sans-serif;
     font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    padding-top: 1rem;
 }
 
 .contact-image {
@@ -920,7 +929,6 @@ footer {
     }
 
     .index-about-description {
-        font-size: 1rem;
         margin: 1rem;
     }
 
@@ -941,7 +949,7 @@ footer {
     }
 
     .about-image2 {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         height: auto;
     }
 
