@@ -166,8 +166,7 @@ label {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
-    margin: 1rem auto;
-    padding-bottom: 1rem;
+    margin: 2rem auto;
 }
 
 /* End Index - About-me */
@@ -277,8 +276,10 @@ label {
 
 .login-text-bottom,
 .register-text-bottom {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
     text-align: center;
-    font-size: 0.8rem;
 }
 
 .user-icon,
@@ -299,7 +300,7 @@ label {
     background: 0 0 !important;
     color: #fff !important;
     font-weight: 300;
-    padding: .150rem .35rem;
+    align-items: center;
     font-size: 0.8rem;
 }
 
@@ -697,6 +698,22 @@ label {
     padding-top: 1rem;
 }
 
+.about-text2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: justify;
+    padding-top: 1rem;
+}
+
+.about-text3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: justify;
+    padding-top: 1rem;
+}
+
 /* ---- End About ---- */
 
 /*---- End Professional Services ----*/
@@ -929,7 +946,8 @@ footer {
     }
 
     .index-about-description {
-        margin: 1rem;
+        font-size: 1.2rem;
+        margin: 1rem 1rem 0 1rem;
     }
 
     .index-about-image {
@@ -941,7 +959,7 @@ footer {
     }
 
     .index-services-description {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .about-image {
@@ -959,9 +977,20 @@ footer {
     }
 
     .about-text {
+        font-size: 1.2rem;
         padding: 2rem 1.3rem 0 1.3rem;
     }
 
+    .about-text2 {
+        font-size: 1.2rem;
+        padding: 4rem 1.3rem 1rem 1.3rem;
+    }
+
+    .about-text3 {
+        font-size: 1.2rem;
+        padding: 3rem 1.3rem 1rem 1.3rem;
+    }
+    
     .services-youtube-image {
         height: 500px;
     }
