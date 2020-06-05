@@ -61,11 +61,11 @@
         </label>
         <div class="row form-group m-0">
             {% if plan == "Single Job" %}
-            <div class="textinput form-control col-4 text-center" style="text-transform: uppercase;">Active</div>
-            <div class="textinput form-control col-8 text-center" style="text-transform: uppercase;">{{ plan }}</div>
+            <div class="textinput form-control col-4 py-3 text-center" style="text-transform: uppercase;">Active</div>
+            <div class="textinput form-control col-8 py-3 text-center" style="text-transform: uppercase;">{{ plan }}</div>
             {% else %}                
-            <div class="textinput form-control col-4 text-center" style="text-transform: uppercase;">{{ plan }}</div>
-            <div class="textinput form-control col-8 text-center" style="text-transform: uppercase;">{{ status }}</div>
+            <div class="textinput form-control col-3 py-3 text-center" style="text-transform: uppercase;">{{ plan }}</div>
+            <div class="textinput form-control col-9 py-3 text-center" style="text-transform: uppercase;">{{ status }}</div>
             {% endif %}
         </div>
         {% else %}
