@@ -60,8 +60,17 @@
             Subscription Plan
         </label>
         <div class="row form-group m-0">
-            <div class="textinput form-control col-3 text-center" style="text-transform: uppercase;">active</div>
-            <div class="textinput form-control col-9 text-center" style="text-transform: uppercase;">{{ plan }}</div>
+            {% if plan == "Single Job" %}
+            <div class="textinput form-control col-4 text-center" style="text-transform: uppercase;">Active</div>
+            <div class="textinput form-control col-8 text-center" style="text-transform: uppercase;">{{ plan }}</div>
+            {% else %}                
+            <div class="textinput form-control col-4 text-center" style="text-transform: uppercase;">{{ plan }}</div>
+            <div class="textinput form-control col-8 text-center" style="text-transform: uppercase;">{{ status }}</div>
+            {% endif %}
+        </div>
+        {% else %}
+        <div class="row form-group m-0">
+            <div class="textinput form-control profile-form-control col-12 py-3">you don't have an active subscription plan</div>
         </div>
         {% endif %}
 

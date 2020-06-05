@@ -300,6 +300,7 @@ label {
     background: 0 0 !important;
     color: #fff !important;
     font-weight: 300;
+    height: auto;
     align-items: center;
     font-size: 0.8rem;
 }
@@ -720,6 +721,14 @@ label {
 
 /*---- Profile ----*/
 
+.profile-form-control {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center !important;
+    font-size: 0.9rem;
+    height: auto;
+}
+
 .profile-button-box {
     margin: 1rem 0 0.5rem 0;
 
@@ -905,9 +914,7 @@ footer {
 
 }
 
-@media (min-width:576px) {
-
-}
+@media (min-width:576px) {}
 
 @media (min-width: 768px) {
     .logo-top {
@@ -990,7 +997,7 @@ footer {
         font-size: 1.2rem;
         padding: 3rem 1.3rem 1rem 1.3rem;
     }
-    
+
     .services-youtube-image {
         height: 500px;
     }
@@ -998,7 +1005,7 @@ footer {
     .payment-title {
         font-size: 2rem;
     }
-    
+
     .footer-logo-paolo {
         font-size: 1.5rem;
     }
