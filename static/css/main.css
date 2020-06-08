@@ -612,6 +612,20 @@ label {
     color: rgba(255, 255, 255, 0.87);
 }
 
+.payment-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.payment-text-top{ 
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
 .service-payment-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -663,6 +677,16 @@ label {
     transition: .15s ease-in-out;
     border-color: #d6d6d6;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.confirmation-icon {
+    background-image: url("../img/confirmation-icon.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    height: 150px;
+    padding: 0;
+    margin: 0 auto 1rem auto;
 }
 
 /* ---- About ---- */
@@ -1004,6 +1028,18 @@ footer {
 
     .payment-title {
         font-size: 2rem;
+    }
+
+    .services-youtube-description {
+        font-size: 1.2rem;
+    }
+
+    .payment-text {
+        font-size: 1.2rem;   
+    }
+
+    .payment-text-top{ 
+        font-size: 1.4rem;
     }
 
     .footer-logo-paolo {

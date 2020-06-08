@@ -148,7 +148,7 @@ STATICFILES_DIRS = [
 # Login URL and redirect
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'profile'
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = '/'
 
 #Cryspy template for bootstrap 4 configuration
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

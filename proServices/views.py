@@ -129,3 +129,4 @@ def successPage(request, plan_type):
     newCustomerSub.save()
 
     return render(request, "success.html")
+
