@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import ContactMeForm
+from django.http import HttpResponse
 
 
 def index(request):
@@ -48,3 +49,8 @@ def contact(request):
 
 def about(request):
     return render(request, "about.html")
+
+
+def handler404(request, exception):
+    """ Error 404 - Page Not Found """
+    return render(request, "error404.html", status=404)

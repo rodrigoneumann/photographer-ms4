@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from pages.views import index
+from pages.views import index, handler404
 
 
 urlpatterns = [
@@ -12,3 +12,5 @@ urlpatterns = [
     path("services/", include("proServices.urls")),
 
 ]
+
+handler404 = handler404
