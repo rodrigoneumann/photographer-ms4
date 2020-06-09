@@ -33,7 +33,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [env('HOSTNAME'), '192.168.1.174']
 
@@ -182,7 +182,7 @@ STRIPE_PUBLISHABLE_KEY = env("STRIPE_PUBLISHABLE_KEY")
 DEFAULT_FILE_STORAGE = "main.custom_storage.MediaStorage"
 
 #Development local static files, after project done, send to remote server
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+#STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 # Message tags to add bootstrap style for alert messages
 MESSAGE_TAGS = {
