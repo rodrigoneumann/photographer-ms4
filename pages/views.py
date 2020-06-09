@@ -6,6 +6,7 @@ from .forms import ContactMeForm
 
 
 def index(request):
+    """ Renders the main page """
     return render(request, "index.html")
 
 
@@ -47,4 +48,5 @@ def contact(request):
 
 
 def about(request):
+    """ Renders about page """
     return render(request, "about.html")

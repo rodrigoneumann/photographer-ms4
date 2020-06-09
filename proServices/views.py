@@ -25,6 +25,9 @@ stripe.api_key = env("STRIPE_SECRET_KEY")
 
 
 def services(request):
+    """ Renders services page with subscription options and photo editing 
+    services quotation form with send_mail to admin """
+
     single = VideoEditingPlans.objects.get(type="Single Job")
     weekly = VideoEditingPlans.objects.get(type="Weekly Plan")
     monthly = VideoEditingPlans.objects.get(type="Monthly Plan")
@@ -38,14 +41,14 @@ def services(request):
             email = request.POST["email"]
             subject = request.POST["subject"]
             photoService = request.POST.getlist("photoService")
-            
-            services = ''
+
+            services = ""
             for i in photoService:
                 if i == photoService[-1]:
                     services += i
                 else:
-                    services += f'{i}, '
-            
+                    services += f"{i}, "
+
             print(photoService)
             message = request.POST["message"]
             send_mail(
@@ -81,7 +84,7 @@ def services(request):
 
 @login_required
 def payment_page(request, plan_choice):
-
+    """ Renders payment page form with stripe credit cards info """
     # check if user is already subscribed
     is_subscribed = UserEditingPlans.objects.filter(user=request.user)
     if is_subscribed.exists():
@@ -95,7 +98,7 @@ def payment_page(request, plan_choice):
 
 @login_required
 def charge(request):
-
+    """ This view gets the payment info and sends to stripe for authorization """
     if request.method == "POST":
         print("Data:", request.POST)
 
@@ -120,8 +123,8 @@ def charge(request):
 
 @login_required
 def successPage(request, plan_type):
-
-    # Get Stripe payment confirmation and save Subscription information into DB
+    """ Get Stripe payment confirmation and save Subscription information into 
+    DB with local time info """
     plan_selection = VideoEditingPlans.objects.get(type=plan_type)
     newCustomerSub = UserEditingPlans(
         user=request.user, editing_plan=plan_selection, date_added=timezone.now(),
@@ -129,4 +132,3 @@ def successPage(request, plan_type):
     newCustomerSub.save()
 
     return render(request, "success.html")
-

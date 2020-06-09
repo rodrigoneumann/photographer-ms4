@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 class RegisterForm(UserCreationForm):
+    """ Form to register a new user """
     first_name = forms.CharField(max_length=15, required=True)
     last_name = forms.CharField( max_length=30, required=True)
     email = forms.EmailField(min_length=3, max_length=45, required=True)
@@ -26,7 +27,7 @@ class RegisterForm(UserCreationForm):
         ]
 
 class EditProfileForm(UserChangeForm):
-    #exclude password field
+    """ Form to edit user name and email, exclude password """
     password = None
 
     #User profile fields to display

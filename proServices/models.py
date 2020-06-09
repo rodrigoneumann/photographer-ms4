@@ -14,6 +14,7 @@ PLAN_CHOICES = (
 
 
 class VideoEditingPlans(models.Model):
+    """ Model for the Video editing plans with type and price """
     type = models.CharField(max_length=18, choices=PLAN_CHOICES)
     price = models.DecimalField(max_digits=5, decimal_places=2)
 
@@ -22,6 +23,7 @@ class VideoEditingPlans(models.Model):
 
 
 class UserEditingPlans(models.Model):
+    """ Model for users subscription plans """
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     editing_plan = models.ForeignKey(
         VideoEditingPlans, on_delete=models.SET_NULL, null=True

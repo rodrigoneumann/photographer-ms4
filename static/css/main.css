@@ -224,6 +224,10 @@ label {
     color: #bebebe;
 }
 
+.no-hover {
+    pointer-events: none;
+}
+
 .index-services-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -620,7 +624,7 @@ label {
     margin-bottom: 1rem;
 }
 
-.payment-text-top{ 
+.payment-text-top {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 300;
@@ -1051,10 +1055,10 @@ footer {
     }
 
     .payment-text {
-        font-size: 1.2rem;   
+        font-size: 1.2rem;
     }
 
-    .payment-text-top{ 
+    .payment-text-top {
         font-size: 1.4rem;
     }
 

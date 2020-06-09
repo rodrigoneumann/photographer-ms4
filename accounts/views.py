@@ -8,7 +8,7 @@ from .forms import RegisterForm, EditProfileForm
 
 
 def register(request):
-    # check if user is authenticated
+    """ Renders the registration page """
     if request.user.is_authenticated:
         return redirect(reverse("index"))
 
@@ -24,8 +24,9 @@ def register(request):
 
 @login_required
 def profile(request):
+    """ Renders the user's profile page with info about personal details
+    and subscription plan details, if subscribed. """
 
-    # check if user is authenticated
     if request.user.is_authenticated is False:
         messages.error(
             request, "You are not authenticated, please login to view this page"
@@ -71,7 +72,7 @@ def profile(request):
 
 @login_required
 def edit_profile(request):
-
+    """ Renders update page for the user. """
     if request.method == "POST":
         form = EditProfileForm(request.POST, instance=request.user)
 
