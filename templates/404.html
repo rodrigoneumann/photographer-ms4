@@ -10,22 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
     <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <!-- Magnific Popup CSS -->
-    <!-- Icon and Title -->
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' type='image/x-icon' %}">
+    <link rel="stylesheet" href="https://photographer-static.s3.amazonaws.com/static/css/main.css">
     <title>404</title>
 </head>
 
 <body>
-    <div class="container col-11 col-md-8 error-box">
+    <div class="container col-11 col-md-8 login-container my-auto">
         <div class="row error-title">404</div>
-        <div class="row error-text">PAGE NOT FOUND</div>
-        <a href="{% url '/' %}">
-            <span class="col-lg-8 btn btn-dark btn-block btn-sm my-2 mx-auto">Click here
-                to return to the main page</span>
-        </a>
-    </div>
+        <div class="row error-sub">OOPS, THE PAGE YOU ARE LOOKING FOR CAN'T BE FOUND!</div>
+        <div class="row profile-button-box mt-4">
+            <div class="col-10 col-sm-6 p-0 mx-auto mb-3">
+                <a href="{% url 'index' %}">
+                    <button class="profile-btn" type="button">Back to main page</button>
+                </a>
+            </div>
+        </div>
 </body>
 
 </html>

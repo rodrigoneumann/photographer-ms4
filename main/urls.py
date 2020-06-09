@@ -11,5 +11,4 @@ urlpatterns = [
     path("portfolio/", include("portfolio.urls")),
     path("pages/", include("pages.urls")),
     path("services/", include("proServices.urls")),
-
 ]

@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import ContactMeForm
-from django.views.defaults import page_not_found
 
 
 def index(request):

@@ -875,6 +875,23 @@ footer {
     margin-bottom: 1rem;
 }
 
+/*---- End Footer ----*/
+
+/*---- Handler 404 ----*/
+
+.error-title {
+    font-size: 10rem;
+    margin: 3rem auto 1rem auto;
+}
+
+.error-sub {
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: justify;
+    padding-top: 1rem;
+    margin: 0 auto;
+}
+
 
 @media (max-width: 320px) {
     .logo-paolo {
