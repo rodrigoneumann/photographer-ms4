@@ -82,3 +82,21 @@ def edit_profile(request):
     else:
         form = EditProfileForm(instance=request.user)
     return render(request, "edit_profile.html", {"form": form})
+
+
+@login_required
+def delete_user(request):
+    """ Renders delete user confirmation page, check if user is subscribed
+    if there's a subscription active, it should be not possible to delete """
+    user = User.objects.get(id=request.user.id)
+    is_subscribed = UserEditingPlans.objects.filter(user=user).first()
+
+    if is_subscribed == None:
+        if request.method == "POST":
+            user.delete()
+            return redirect("index")
+        return render(request, "delete_confirm.html")
+    messages.error(
+        request, "It is not possible to delete the user with an active subscription."
+    )
+    return redirect("profile")
