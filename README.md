@@ -16,7 +16,7 @@ This is a project that, after evaluation at the Code Institute, will receive oth
 
 1. [**UX**](#ux)
     - [**User Stories**](#user-stories)
-      - [**As a user of this platform, I will be able to:**](#as-a-user-of-this-platform-i-will-be-able-to)
+      - [**As a user of this website, I will be able to:**](#as-a-user-of-this-website-i-will-be-able-to)
 2. [**Design**](#design)
     - [**Typography**](#typography)
       - [**Colours**](#colours)
@@ -25,14 +25,24 @@ This is a project that, after evaluation at the Code Institute, will receive oth
 3. [**Features**](#features)
     - [**Existing Features**](#existing-features)
       - [**Base**](#base)
-      - [**Register a new agent**](#register-a-new-agent)
-      - [**Agent Login**](#agent-login)
-      - [**Agent Profile**](#agent-profile)
-        - [**Update Photo**](#update-photo)
-        - [**Update Password**](#update-password)
+      - [**Register a new user**](#register-a-new-user)
+      - [**User Login**](#user-login)
+      - [**User Profile**](#user-profile)
+        - [**Edit Profile**](#edit-profile)
+        - [**Password Reset**](#password-reset)
         - [**Delete Account**](#delete-account)
-      - [**Listing ads**](#listing-ads)
-      - [**Add a new property**](#add-a-new-property)
+      - [**Portfolio Selection**](#portfolio-selection)
+      - [**Photo or Video Listing**](#photo-or-video-listing)
+        - [**Photo Listing**](#photo-listing)
+        - [**Video Listing**](#video-listing)
+      - [**About Me**](#about-me)
+      - [**Professional Services**](#professional-services)
+        - [**Youtube Video Editing**](#youtube-video-editing)
+          - [**Subscription Payment Page**](#subscription-payment-page)
+          - [**Payment Successful Page**](#payment-successful-page)
+        - [**Photo Editing quotation form**](#photo-editing-quotation-form)
+      - [**Contact Page**](#contact-page)
+      - [**Add a Photo**](#portfolio-selection)
       - [**Update a property**](#update-a-property)
       - [**Delete a property**](#delete-a-property)
       - [**Property Details**](#property-details)
@@ -58,13 +68,11 @@ This is a project that, after evaluation at the Code Institute, will receive oth
      - [**Code**](#code)
 8. [**Acknowledgements**](#acknowledgements)
 
-
-
 # UX
 
 ## User Stories
 
-### As a user of this platform, I will be able to:
+### As a user of this website, I will be able to:
 
 - Access the platform from your favorite equipment, such as smartphones, tablets, laptops or PCs, without loss of content.
 - Access the photographer's portfolio of photos, divided by category. When clicking on a photo it will be displayed in large size and caption with information about the photo.
@@ -73,44 +81,45 @@ This is a project that, after evaluation at the Code Institute, will receive oth
 - Register a user account, log in to the system and recover a password with a link sent by email if it has been lost.
 - A logged-in user can subscribe to one of the 3 video editing plans available to YouTubers.
 - Securely pay for a subscription using the Stripe API payment platform
+- Send to the photographer a quote request for photo editing using the form on the services page.
 - Access the user's profile page, update data such as name and email and view the current subscription type, if you have an asset, and its expiration date (weekly and monthly plans only)
 - Reset my password.
-- Delete my agent profile from the platform.
-- View all properties filtered by type of negotiation, such as properties for sale or rent.
-- View the latest properties for sale and rental on the home page in carousels, and be able to access them directly through it.
-- Filter and view all my ads, for sale or rent.
+- Delete my user account.
+- Send messages to the photographer from the form on the contact page.
+- Access the photographer's social networks from the icons on the bottom of the page or through the side menu.
+
 
 ## Design
 This project was developed with a focus on a mobile approach first. However, with full responsiveness on other screen sizes.
-I used the grids, nav, carousel and bootstrap colours in this project.
-The main idea for the design of this project was to have a serious and professional appearance at the same time, with a light colour, a box with rounded corners and soft shadows, which convey sophistication and provide a pleasant user experience.
+I chose to use the dark theme throughout the website so that the photos and videos of the photographer's work were more prominent on the dark background, as this is the main focus.
+The main idea for the design of this project was to have a serious and professional appearance at the same time, which convey sophistication and provide a pleasant user experience.
 
 ### Typography
 
 - The main font used in this project is **Robotto**. I think that's a well designed and easy to read font. An extra reason for using this font is the excellent display on small screens.
-- In the main titles of the site, the font **Poppins** was used, which also has a good design and combines nicely with the main font.
+- In the main titles of the site this font-weight of 100 was used, and font-weight of 200 for the text-body.
 
 
 ### Colours
 
-- In the colour scheme, I used shades that favoured the easy visualization of the information.
-- In the navbar and footer, I used the white background with letters in a dark grey tone, giving a greater contrast for logo information and menu options. As well as a light shadow in the division with the Body.
-- In the background, I used an image of the wooden floor with a slight change in opacity to make it a little lighter.
-- In the boxes for adding and editing properties, login and user registration, a title with a dark grey background with white letters was used to give greater contrast.
-- The buttons have a dark tone with white letters and black borders, making an interesting effect.
-- Some images with white dolls were used in the user's standard photo and when the user has not yet included an ad.
+- In the color scheme was used shades of white, with only differences in opacity.
+- In the Sidebar I used the white background with letters in a dark grey tone, giving a greater contrast for logo and menu options. And a darker shade of red for the hover effect.
+- A slightly lighter shade of black was used in the background #191919
+- In the boxes in addition to the variation of shades of gray, a border in white tone with opacity was added to give an elegant highlight.
+- the buttons used the same shade of red as the sidebar, however the hover effect was added a little more brightly and a border with a darker shade of red, making an interesting effect which contrasts with the white color font.
+- In the portfolio photos, a shadow effect with a white tone with blur was used.
 
 ### Icons
 
-The icons used in this project are provided by [Font Awesome 5.12.1](https://fontawesome.com/).
-They were used in the social media icons in the footer.
+The icons used in this project are provided by [Font Awesome 5.13.0](https://fontawesome.com/).
+The icons were used on the main page in the services section, social media icons on the footer and sidebar.
 
 ## Wireframes
 
 These wireframes were designed with Balsamiq Mockups 3. These were the first version of scope and some minor things have changed during the development for the final version.
-* Mobile displays [here](https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/wireframes/wireframe_mobile.png)
-* Medium displays [here](https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/wireframes/wireframe_tablet.png)
-* Large displays [here](https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/wireframes/wireframe_desktop.png)
+* Mobile displays [here]()
+* Medium displays [here]()
+* Large displays [here]()
 
 # Features
 
@@ -118,131 +127,181 @@ These wireframes were designed with Balsamiq Mockups 3. These were the first ver
 
 ### Base
 
-All pages have the navigation bar with the logo and all visible links and footer.
+All pages have the sidebar with the logo with links and footer.
 
-* **User not logged into the platform**
+* **User not logged in**
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/visitor.png" target="_blank" rel="noopener" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.16.59.png" target="_blank" rel="noopener" alt="Paolo Martino Sidebar">
 </div>
 
-If the access is made by an unregistered user it will be able to view the main page with both carousels with the latest ads registered for sale and for rent. this visitor can also access the link to view all ads registered on the platform.
-The user registration and login link will also be visible to the visitor.
+The non-logged-in user has access to all content on the site as a portfolio, about me and contact. Registration and login buttons are available.
 
 * **User logged into the platform**
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/logged_user.png" target="_blank" rel="noopener" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.09.20+2.png" target="_blank" rel="noopener" alt="Paolo Martino Sidebar">
 </div>
 
-A logged-in agent will have access links to add a new property, my ads, profile and a logout button available.
+The user connected to the system has access to all the content of the website and also the MY ACCOUNT page, in addition to the logout button also being available.
 
-### Register a new agent
+### Register a new user
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/register.png" target="_blank" rel="noopener" width="400" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.35.40.png" target="_blank" rel="noopener" width="400" alt="Register new user">
 </div>
 
-**CRUD - CREATE**
-When accessing the registration screen, the agent has to choose the username and password for the platform.
-Some checks are made on the database before the new inclusion, as if the username already exists in the database, if so, an error message is displayed.
-It is also necessary that the username and password have more than 5 alphanumeric characters.
+When accessing the registration screen, the user needs to fill in first name, last name, email and choose a username and password for the platform.
+Some checks are made on the database before the new inclusion as if the username already existed in the database; in this case, an error message is displayed.
+It is also necessary that the password meets the minimum security requirements defined by the Django authentication system.
+Below the registration button, a link is available that takes the login page directly to users already registered.
 
-### Agent Login
+### User Login
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/login.png" target="_blank" rel="noopener" width="400" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.42.00.png" target="_blank" rel="noopener" width="400" alt="User Login">
 </div>
 
-**CRUD - READ**
-The login screen is very similar to the registration screen visually, but it is possible to view a link to access the registration screen for users who have not yet registered.
-When trying to log in, a check is made if the user is registered on the platform, otherwise, an error message is displayed. The password is also entered, if incorrect it returns an incorrect password error.
+On the login screen, the user is asked to fill in his login and password for access.
+If the user does not remember his password, he can request a password reset at the FORGOT PASSWORD link.
+A link to access the registration page is provided immediately below if the user does not already have it.
 
-### Agent Profile
+### User Profile
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/profile.png" target="_blank" rel="noopener" width="500" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.51.43.png" target="_blank" rel="noopener" width="500" alt="User Profile">
 </div>
 
-After logging into the system, the agent can access its profile screen.
-There are four buttons, which are a link to view your registered ads, password change, photo change and a button to delete the user account.
+After logging into the system, the agent can access their profile screen via the MY ACCOUNT button on the sidebar.
+There are three buttons, one that takes you to the page to change the profile, password reset, and another to return to the main page.
 
-### Update Photo
+#### Edit Profile
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/update_photo.png" target="_blank" rel="noopener" width="450" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+15.00.43.png" target="_blank" rel="noopener" width="450" alt="Edit Profile">
 </div>
 
-**CRUD - UPDATE**
-When clicking on the photo change option, a new modal is presented on the screen requesting the link where the photo you wanted to use is hosted.
-Two buttons will also be displayed, one to update and the other to cancel.
+In the edit profile screen, the change of the user's first name, last name and email is available.
+Three buttons are available on this page, one to return to the main page, one to save changes and the last to delete the user account.
+** It will only be possible to delete the user if he does not have an active subscription plan.
 
-### Update Password
+#### Password Reset
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/change_password.png" target="_blank" rel="noopener" width="450" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+15.13.43.png" target="_blank" rel="noopener" width="450" alt="Password Reset">
 </div>
-
-**CRUD - UPDATE**
-When clicking on the password change option, a new modal is presented on the screen requesting the new password that the user would like to use.
-Two buttons will also be displayed, one for updating the password and one for cancelling.
-
-### Delete Account
-<div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/delete_account.png" target="_blank" rel="noopener" width="450" alt="Swift Estates">
-</div>
-
-**CRUD - DELETE**
-When clicking on the option to delete the user account, a new modal is presented an alert that if the account is deleted, all ads linked to that user will be permanently deleted.
-Two buttons will also be displayed, one to confirm and one to cancel.
-
-### Listing ads
-<div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/property_list.png" target="_blank" rel="noopener" width="600" alt="Swift Estates">
-</div>
-
-**CRUD - READ**
-The ad listing screen is used for two different purposes.
-One is to list all properties, regardless of who the agent is.
-Another is accessed in My Ads, where a filter is made of the ads linked to the logged-in user.
-Both listings offer a display filter, where you can filter ads by type of deal. **All properties**, **For Sale** or **For Rent**
-
-### Add a new property
-<div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/add_new_property.png" target="_blank" rel="noopener" height="400" alt="Swift Estates">
-</div>
-
-**CRUD - CREATE**
-When a user is logged in, the link to add a new property/ad is displayed on the navbar.
-In this register, it is possible to select some characteristics of the property. Like the type of property, number of bedrooms, number of bathrooms, address, the complement of address, district, city, postcode, detailed description of the property or messages, link to add an image to the property, price and finally which agent owns the property ads.
-Two buttons will be displayed, one to add and one to cancel if the agent has changed his mind.
-
-### Update a property
-<div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/edit_property.png" target="_blank" rel="noopener" height="400" alt="Swift Estates">
-</div>
-
-**CRUD - UPDATE**
-When an ad is owned by the logged-in agent, the Edit button and the Delete button will be displayed.
-If the agent clicks on edit, all information for that announcement is requested in the database and is displayed on the edit property screen.
-After the agent makes all the changes, you can also click on update or simply if you have changed your mind, cancel it.
-When clicked on update, the new data will be updated in the database.
-
-### Delete a property
-<div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/own_ads.png" target="_blank" width="400" rel="noopener" alt="Swift Estates">
-</div>
-
-**CRUD - DELETE**
-When an ad is owned by the logged-in agent, the Edit button and the Delete button will be displayed.
-In this case, the agent will be able to permanently delete an ad if necessary.
-
-### Property Details
+<p>On the password reset page, the user's registration email will be requested so that an email with the password reset link will be sent.</p>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/property_details.png" target="_blank" rel="noopener" width="400" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+15.47.03.png" target="_blank" rel="noopener" width="450" alt="Password Reset">
 </div>
 
-**CRUD - READ**
-When a user clicks on any ads in the list of properties, a screen will be displayed with all the detailed information provided for that property.
-If the logged-in agent is the owner of the ad, he will be able to view the edit or delete buttons, if he is not the owner, these buttons will not be displayed.
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+15.50.26.png" target="_blank" rel="noopener" width="450" alt="Password Reset">
+</div>
+<p>Upon opening this email and clicking on the link sent, the user will be redirected to the new password registration screen.</p>
+
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+15.53.33.png" target="_blank" rel="noopener" width="450" alt="Password Reset">
+</div>
+<p>After clicking update a confirmation screen will be displayed and the redirect button will be displayed for the login screen</p>
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+16.03.45.png" target="_blank" rel="noopener" width="450" alt="Password Reset">
+</div>
+
+
+#### Delete Account
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+16.13.30.png" target="_blank" rel="noopener" width="450" alt="Delete Account">
+</div>
+
+When clicking on the button to delete the account, a message is displayed alerting the user that this action will be permanent and cannot be undone. If the user wishes to continue the account will be deleted. A button is also displayed to return to the profile page.
+
+### Portfolio selection
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+16.52.58.png" target="_blank" rel="noopener" width="600" alt="Portfolio">
+</div>
+
+When accessing the portfolio page, the photo or video option is displayed. When you click on one of the two options, the listing page is displayed.
+
+### Photo or Video Listing
+The page that lists photos and videos has a menu to filter the chosen categories.
+
+#### Photo Listing
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+17.25.02.png" target="_blank" rel="noopener" width="400" alt="Photo Listing">
+</div>
+The Photo portfolio has 6 categories - Music Shows, Studio, Food, Weeding, Drone and Fine Art.
+
+#### Video Listing
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+17.23.08.png" target="_blank" rel="noopener" width="400" alt="Video Listing">
+</div>
+Video portfolio has 4 - Music, Institutional, Events and Drone.
+
+### About Me
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.01.30.png" target="_blank" width="450" rel="noopener" alt="About Me">
+</div>
+
+On the page ABOUT ME, there is a short history about the life and several works already done by the photographer.
+Three photos were included among the texts to generate a more pleasant visual impact for the user.
+
+### Professional Services
+
+#### Youtube Video Editing
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.08.58.png" target="_blank" width="450" rel="noopener" alt="Youtube Editing">
+</div>
+
+Text
+
+#### Subscription Payment Page
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.22.06.png" target="_blank" width="250" rel="noopener" alt="Subscription Plan Payment">
+</div>
+
+Text
+
+#### Payment Successful Page
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.24.42.png" target="_blank" width="350" rel="noopener" alt="Payment Successful">
+</div>
+
+Text
+
+#### Photo Editing quotation form
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.09.41.png" target="_blank" width="250" rel="noopener" alt="Photo editing">
+</div>
+
+Text
+
+### Contact Page
+<div align="center">
+<img src="" target="_blank" width="450" rel="noopener" alt="About Me">
+</div>
+
+Text
+
+### Add a new photo or video to portfolio ( Website admin users )
+<div align="center">
+<img src="" target="_blank" rel="noopener" height="400" alt="Add photo or video">
+</div>
+
+Text
+
+### Update a Photo or Video from the portfolio ( Website admin users )
+<div align="center">
+<img src="" target="_blank" rel="noopener" height="400" alt="Update photo or video">
+</div>
+
+Text
+
+### Delete a Photo or Video from the portfolio ( Website admin users )
+<div align="center">
+<img src="" target="_blank" width="400" rel="noopener" alt="Delete photo or video">
+</div>
+
+Text
+
 
 ### Error Page
 <div align="center">
-<img src="https://raw.githubusercontent.com/rodrigoneumann/third-milestone-project/master/semgmtapp/static/img/Readme/error.png" target="_blank" width="450" rel="noopener" alt="Swift Estates">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+17.19.54.png" target="_blank" width="450" rel="noopener" alt="Error page">
 </div>
 
 A 404 error page will be displayed if the user tries to access any page that does not exist in the app.
@@ -252,10 +311,7 @@ A button will be shown that redirects the user to the main page.
 
 The next steps are:
 
-Implement google maps API so that you can view ads on a map.
-Implement new features of the search tool, such as a search for the number of bedrooms or bathrooms.
-Add email integration, so the agent has a direct mail tool for customers.
-Develop a website for customer access and integrate with the internal system.
+Text
 
 # Technologies Used
 ## Tools
@@ -271,34 +327,33 @@ Develop a website for customer access and integrate with the internal system.
       - This project uses **GitHub** to store and share all project code remotely.
   - [Git](https://git-scm.com/) 
       - It is used for version control
-  - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) 
-      - It is the database used for this project.
+  - [PostgreSQL](https://www.postgresql.org/) 
+      - It is the database used for this project, provided by Heroku.
   - [Photoshop 2020](http://www.adobe.com/Photoshop)
       - This project used **Photoshop 2020** to edit all the images.
   - [Illustrator 2020](http://www.adobe.com/illustrator)
-      - This project used **Illustrator 2020** to create and edit the logo.
+      - This project used **Illustrator 2020** to edit the Readme main image.
   - [Tinypng](https://tinypng.com/)
       -  Used to compress the size of images.
-  - [Imgbb](https://imgbb.com) 
-      - used to store some external images for this project.
-  - [Am I Responsive](http://ami.responsivedesign.is/)
-      - Used to get images for the README in different screen sizes. 
-  
+  - [AWS S3](https://aws.amazon.com/) 
+      - Cloud storage used to store media and static files for this project.
+
+
 ## Libraries
 
-  - [Bootstrap](https://www.bootstrapcdn.com/)
+  - [Bootstrap 4.4.1](https://www.bootstrapcdn.com/)
       - This project uses **Bootstrap** for better responsiveness and organization. It was also used for some CSS attributes and effects.
-  - [FontAwesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css)
+  - [FontAwesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css)
       - The project uses **Font Awesome** to provide some icons. 
   - [Google Fonts](https://fonts.google.com/)
-      - The project uses **Google fonts** to provide 'Roboto' ans 'Poppins' font.
+      - The project uses **Google fonts** to provide 'Roboto' font.
   - [JQuery](https://jquery.com) 
       - Used to simplify DOM manipulation.
-  - [Flask 1.1.1](http://flask.pocoo.org/)   
-     - Back-end Python microframework.
+  - [Django 3.0.7](https://www.djangoproject.com/)   
+     - Back-end Python Framework.
   - [PyMongo 3.10.1](https://api.mongodb.com/python/current/) - Python API for MongoDB.
   - [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) 
-      - It is the default templating language for flask used for display data from the python application in Html templates.
+      - It is the default templating language for Django used for display data from the python application in Html templates.
 
 ## Languages
 
@@ -321,9 +376,6 @@ Tests to add new ads since all fields in the forms also responded well to the ve
 The request tests the data for a specific ad so that changes are made and sent back to the database also work smoothly.
 All error or confirmation flash messages are also running smoothly.
 
-If you want to test a user with several properties registered for testing:
-Login: manoela
-Password: 12345
 
 ### Tools used for testing
 
@@ -353,7 +405,7 @@ Password: 12345
 
   - Galaxy Note 8
   - Galaxy Note 9
-  - Gakaxy Note 10 (real device)
+  - Gakaxy Note 10 Plus 5G (real device)
   - Galaxy S5
   - Galaxy S7+ (real device)
   - Galaxy S9/S9+ (real device)
@@ -372,7 +424,7 @@ Password: 12345
   - Pixel 2 XL
 
 - Tablets
-  - iPad (real device)
+  - iPad 4gen (real device)
   - iPad Pro 10.5-inch
   - iPad Pro 12.9
   - Kindle Fire HDX
@@ -382,6 +434,7 @@ Password: 12345
 * Laptops
 
   - MacBook Pro 13" (real device)
+  - MacBook Pro 15" (real device)
   - Asus Swift 3 (real device)
 
 * Windows 10 computer
@@ -393,7 +446,7 @@ Password: 12345
 
 You will need the following tools installed on your system:
 
-- [Python 3](https://www.python.org/downloads/)
+- [Python 3.7.7](https://www.python.org/downloads/)
 - An IDE such as [Visual Studio Code](https://code.visualstudio.com/) or [PyCharm](https://www.jetbrains.com/pycharm/download/)
 - An account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) 
 - [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
