@@ -44,10 +44,10 @@ This is a project that, after evaluation at the Code Institute, will receive oth
           - [**Payment Successful Page**](#payment-successful-page)
         - [**Photo Editing quotation form**](#photo-editing-quotation-form)
       - [**Contact Page**](#contact-page)
-      - [**Add a Photo**](#portfolio-selection)
-      - [**Update a property**](#update-a-property)
-      - [**Delete a property**](#delete-a-property)
-      - [**Property Details**](#property-details)
+      - [**Photo and Video Content ( Content admin users )**](#photo-and-video-content-(-content-admin-users-))
+        - [**Add a new photo or video to portfolio ( Content admin users )**](#add-a-new-photo-or-video-to-portfolio-(-content-admin-users-))
+        - [**Update a Photo or Video from the portfolio ( Content admin users )**](#update-a-photo-or-video-from-the-portfolio-(-content-admin-users-))
+        - [**Delete a Photo or Video from the portfolio ( Content admin users )**](#delete-a-photo-or-video-from-the-portfolio-(-content-admin-users-))
       - [**Error Page**](#error-page)
      - [**Features Left to Implement**](#features-left-to-implement)
 4. [**Technologies Used**](#technologies-used)
@@ -277,28 +277,29 @@ Weekly plan which consists of one week of subscription with up to 3 videos edite
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.22.06.png" target="_blank" width="250" rel="noopener" alt="Subscription Plan Payment">
 </div>
 
-Text
+On the payment page of the plan, data such as name and email of the logged-in user, such as the selected subscription plan and the price are automatically filled in. the only field available for the user to fill in is the card details, expiration date, security code and postcode.
+After filling in without typing errors, the customer can click on PAY NOW to complete the payment.
 
 #### Payment Successful Page
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.24.42.png" target="_blank" width="300" rel="noopener" alt="Payment Successful">
 </div>
 
-Text
+After the payment is made successfully, a successful page is displayed and buttons to go to the profile or to take the main page are displayed.
 
 #### Photo Editing quotation form
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.09.41.png" target="_blank" width="250" rel="noopener" alt="Photo editing">
 </div>
 
-Text
+In the photo editing section of the services page, a form is made available for the user to submit a price quote request for photo editing services. The available fields are Name, Email, Subject, the type of service (simple photo editing, photo restoration, wedding photo editing, background removal, drop shadow or others), and a field for entering the message.
 
 ### Contact Page
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-13+at+13.20.01.png" target="_blank" width="350" rel="noopener" alt="About Me">
 </div>
 
-Text
+On the contact page, a form is available for the user to send messages to the photographer containing the fields Name, email, subject and message. - Django send_mail module is fully functional.
 
 ### Photo and Video Content ( Content admin users )
 <div align="center">
@@ -338,9 +339,17 @@ A button will be shown that redirects the user to the main page.
 
 ## Features Left to Implement
 
-The next steps are:
+As this is a real project for a real client, my next steps will be:
 
-Text
+-Change all front-end content to a framework like React.<br>
+-Use Django Rest Framework integrated with React.<br>
+-Change the payment system to a more integrated platform to the Brazilian market, which is the customer's focus market.<br>
+-Translate all the content of the website into Portuguese and offer the option of displaying the website in PT-BR and EN-GB.<br>
+-Present to the client a section of testimonials - this idea was initially denied by the client.<br>
+-Create an administrative environment for administrator users to manage messages and testimonials (if approved).<br>
+-Move all the content of the website to a definitive server, with the photographer's own domain.
+
+Any other extra functionality will be discussed in the future with the customer.
 
 # Technologies Used
 ## Tools
@@ -357,7 +366,7 @@ Text
   - [Git](https://git-scm.com/) 
       - It is used for version control
   - [PostgreSQL](https://www.postgresql.org/) 
-      - It is the database used for this project, provided by Heroku.
+      - It is the relational database used for this project, provided by Heroku.
   - [Photoshop 2020](http://www.adobe.com/Photoshop)
       - This project used **Photoshop 2020** to edit all the images.
   - [Illustrator 2020](http://www.adobe.com/illustrator)
@@ -380,7 +389,8 @@ Text
       - Used to simplify DOM manipulation.
   - [Django 3.0.7](https://www.djangoproject.com/)   
      - Back-end Python Framework.
-  - [PyMongo 3.10.1](https://api.mongodb.com/python/current/) - Python API for MongoDB.
+  - [Django Storages](https://github.com/boto/boto3) - collection of custom storage backends for Django. Used with Boto 3 for AWS S3 Buckets use.
+  - [Boto3](https://github.com/boto/boto3) - AWS SDK for Python to use with S3 Buckets
   - [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) 
       - It is the default templating language for Django used for display data from the python application in Html templates.
 
