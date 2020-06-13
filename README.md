@@ -34,6 +34,7 @@ This is a project that, after evaluation at the Code Institute, will receive oth
       - [**Portfolio Selection**](#portfolio-selection)
       - [**Photo or Video Listing**](#photo-or-video-listing)
         - [**Photo Listing**](#photo-listing)
+          - [**Photo Zoom and caption**](#photo-zoom-and-caption)
         - [**Video Listing**](#video-listing)
       - [**About Me**](#about-me)
       - [**Professional Services**](#professional-services)
@@ -131,14 +132,14 @@ All pages have the sidebar with the logo with links and footer.
 
 * **User not logged in**
 <div align="center">
-<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.16.59.png" target="_blank" rel="noopener" alt="Paolo Martino Sidebar">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.16.59.png" width="250" target="_blank" rel="noopener" alt="Paolo Martino Sidebar">
 </div>
 
 The non-logged-in user has access to all content on the site as a portfolio, about me and contact. Registration and login buttons are available.
 
 * **User logged into the platform**
 <div align="center">
-<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.09.20+2.png" target="_blank" rel="noopener" alt="Paolo Martino Sidebar">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.09.20+2.png" width="250" target="_blank" rel="noopener" alt="Paolo Martino Sidebar">
 </div>
 
 The user connected to the system has access to all the content of the website and also the MY ACCOUNT page, in addition to the logout button also being available.
@@ -226,11 +227,19 @@ The page that lists photos and videos has a menu to filter the chosen categories
 </div>
 The Photo portfolio has 6 categories - Music Shows, Studio, Food, Weeding, Drone and Fine Art.
 
+#### Photo Zoom and caption
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.48.46.png" target="_blank" rel="noopener" width="400" alt="Photo Listing">
+</div>
+
+When clicking on a photo in the listing, the photo will appear in full size with details about the work
+
 #### Video Listing
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+17.23.08.png" target="_blank" rel="noopener" width="400" alt="Video Listing">
 </div>
 Video portfolio has 4 - Music, Institutional, Events and Drone.
+When clicking on a video in the list, the video will be played in thumbnail, with the possibility of watching it in full screen.
 
 ### About Me
 <div align="center">
