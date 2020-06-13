@@ -17,6 +17,7 @@ This is a project that, after evaluation at the Code Institute, will receive oth
 1. [**UX**](#ux)
     - [**User Stories**](#user-stories)
       - [**As a user of this website, I will be able to:**](#as-a-user-of-this-website-i-will-be-able-to)
+      - [**As a content admin user I will be able to:**](#as-a-content-admin-user-i-will-be-able-to)
 2. [**Design**](#design)
     - [**Typography**](#typography)
       - [**Colours**](#colours)
@@ -89,6 +90,14 @@ This is a project that, after evaluation at the Code Institute, will receive oth
 - Send messages to the photographer from the form on the contact page.
 - Access the photographer's social networks from the icons on the bottom of the page or through the side menu.
 
+### As a content admin user I will be able to:
+
+- Have access to all the functionalities available as a simple user.
+- Add new photos, with title, description and upload image directly to the remote server.
+- Add new videos with Title, Description and Url for the video embed on vimeo.
+- Update title, description or photo of an existing entry.
+- Update title, description or url of the video embed on Vimeo.
+- Delete an existing photo or video entry from the system.
 
 ## Design
 This project was developed with a focus on a mobile approach first. However, with full responsiveness on other screen sizes.
@@ -256,7 +265,12 @@ Three photos were included among the texts to generate a more pleasant visual im
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.08.58.png" target="_blank" width="450" rel="noopener" alt="Youtube Editing">
 </div>
 
-Text
+On the services page in the video editing section for YouTubers, 3 plan options are available:
+<p>Single Job, which consists of a single edited and revised video.</p>
+Weekly plan which consists of one week of subscription with up to 3 videos edited and reviewed.
+<p>Monthly plan that consists of a month of subscription with up to 20 edited and reviewed videos.</p>
+<p>After choosing the plan, it is necessary to click on the Hire Me button, which redirects the user to the payment screen.</p>
+**The user must be logged in the system before going to the payment page, if not logged in, he will be taken to the login page.
 
 #### Subscription Payment Page
 <div align="center">
@@ -267,7 +281,7 @@ Text
 
 #### Payment Successful Page
 <div align="center">
-<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.24.42.png" target="_blank" width="350" rel="noopener" alt="Payment Successful">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.24.42.png" target="_blank" width="300" rel="noopener" alt="Payment Successful">
 </div>
 
 Text
@@ -281,31 +295,37 @@ Text
 
 ### Contact Page
 <div align="center">
-<img src="" target="_blank" width="450" rel="noopener" alt="About Me">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-13+at+13.20.01.png" target="_blank" width="350" rel="noopener" alt="About Me">
 </div>
 
 Text
 
-### Add a new photo or video to portfolio ( Website admin users )
+### Photo and Video Content ( Content admin users )
 <div align="center">
-<img src="" target="_blank" rel="noopener" height="400" alt="Add photo or video">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-13+at+13.04.05.png" target="_blank" rel="noopener" width="400" alt="Add photo or video">
 </div>
+<p>The content of photos and videos on the website will be easily managed by users with specific permissions just to add, edit or remove photo and video content from the website, by Django Admin.</p>
 
-Text
-
-### Update a Photo or Video from the portfolio ( Website admin users )
+#### Add a new photo or video to portfolio ( Content admin users )
 <div align="center">
-<img src="" target="_blank" rel="noopener" height="400" alt="Update photo or video">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-13+at+13.05.10.png" target="_blank" rel="noopener" width="400" alt="Add photo or video">
 </div>
 
-Text
+<p>It is possible to add a title, category, description and upload a photo, in the photo portfolio or a video url embed for video portfolio.</p>
 
-### Delete a Photo or Video from the portfolio ( Website admin users )
+#### Update a Photo or Video from the portfolio ( Content admin users )
 <div align="center">
-<img src="" target="_blank" width="400" rel="noopener" alt="Delete photo or video">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-13+at+13.04.48.png" target="_blank" rel="noopener" width="400" alt="Update photo or video">
 </div>
 
-Text
+<p>It is possible to edit the title, category, description and change the photo, in the photo portfolio or a video url embed for video portfolio.</p>
+
+#### Delete a Photo or Video from the portfolio ( Content admin users )
+<div align="center">
+<img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-13+at+13.41.51.png" target="_blank" width="400" rel="noopener" alt="Delete photo or video">
+</div>
+
+It is possible to delete a photo or video entry just by clicking the delete button on the photo or video change page. After that just confirm on the warning screen.
 
 
 ### Error Page
