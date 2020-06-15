@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<!---- Breadcrumb ---->
+<!-- Breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -15,15 +15,15 @@
         <li class="breadcrumb-item active">{{ category }}</li>
     </ol>
 </nav>
-<!---- End Breadcrumb ---->
+<!-- End Breadcrumb -->
 
-<!---- Content ---->
+<!-- Content -->
 
 <div class="container p-0">
     <div class="row login-title">
         <span>VIDEOS</span>
     </div>
-    <!---- Photo Categories ---->
+    <!-- Photo Categories -->
     <div class="container-fluid categories-menu">
         <a href="{% url 'video_music' %}" class="btn category-btn">Music</a>
         <a href="{% url 'institutional' %}" class="btn category-btn">Institutional</a>
@@ -31,7 +31,7 @@
         <a href="{% url 'drone' %}" class="btn category-btn">Drone</a>
     </div>
 
-    <!---- End Categories ---->
+    <!-- End Categories -->
 
     <!-- Videos -->
     <div class="row justify-content-center mb-4">

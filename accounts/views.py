@@ -78,6 +78,9 @@ def edit_profile(request):
 
         if form.is_valid():
             form.save()
+            messages.success(
+                request, "You have successfully changed your personal data"
+            )
             return redirect("profile")
     else:
         form = EditProfileForm(instance=request.user)

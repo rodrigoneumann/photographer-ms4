@@ -6,20 +6,20 @@
 
 {% block content %}
 
-<!---- Breadcrumb ---->
+<!-- Breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Subscription confirmation</li>
     </ol>
 </nav>
-<!---- End Breadcrumb ---->
+<!-- End Breadcrumb -->
 
-<!---- Alert Messages  ---->
+<!-- Alert Messages  -->
 {% include "partials/messages.html" %}
-<!---- End Alert Messages  ---->
+<!-- End Alert Messages  -->
 
-<!---- Content ---->
+<!-- Content -->
 
 <div class="container">
     <div class="row login-title">
@@ -40,12 +40,12 @@
         <div class="row profile-button-box mt-4">
             <div class="col-12 col-sm-6 p-0 pr-sm-2 mb-3">
                 <a href="{% url 'profile' %}">
-                    <button class="profile-btn" type="button">MY PROFILE</button>
+                    <div class="profile-btn text-center">MY PROFILE</div>
                 </a>
             </div>
             <div class="col-12 col-sm-6 p-0 pl-sm-2 mb-3">
                 <a href="{% url 'index' %}">
-                    <button class="profile-btn" type="button">BACK TO MAIN</button>
+                    <div class="profile-btn text-center">BACK TO MAIN</div>
                 </a>
             </div>
         </div>

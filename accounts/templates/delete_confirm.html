@@ -7,7 +7,7 @@
 {% block content %}
 
 
-<!---- Breadcrumb ---->
+<!-- Breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-style">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -15,17 +15,17 @@
         <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
     </ol>
 </nav>
-<!---- End Breadcrumb ---->
+<!-- End Breadcrumb -->
 
-<!---- Alert Messages  ---->
+<!-- Alert Messages  -->
 {% include "partials/messages.html" %}
-<!---- End Alert Messages  ---->
+<!-- End Alert Messages  -->
 
-<!---- Content ---->
+<!-- Content -->
 
 <div class="container">
     <div class="row page-title">
-        <span>Delete User</span>
+        <span>DELETE USER ACCOUNT</span>
     </div>
 </div>
 
@@ -39,13 +39,11 @@
                         This action <strong>cannot be undone</strong>, are you sure you want to delete your user account?</span>
                 </div>
                 <div class="col-12 col-sm-6 p-0 pr-sm-2 mb-3 mx-auto">
-                    <a href="{% url 'delete_user' %}">
-                        <button class="profile-btn" type="submit">CONFIRM</button>
-                    </a>
+                        <button class="profile-btn text-center" type="submit">CONFIRM</button>
                 </div>
                 <div class="col-12 col-sm-6 p-0 pl-sm-2 mb-3 mx-auto">
                     <a href="{% url 'profile' %}">
-                        <button class="profile-btn" type="button">BACK TO PROFILE</button>
+                        <div class="profile-btn text-center">BACK TO PROFILE</div>
                     </a>
                 </div>
             </div>

@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<!---- Breadcrumb ---->
+<!-- Breadcrumb -->
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb breadcrumb-style">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -14,14 +14,14 @@
     <li class="breadcrumb-item active" aria-current="page">Payment</li>
   </ol>
 </nav>
-<!---- End Breadcrumb ---->
+<!-- End Breadcrumb -->
 
 <!-- Stripe CSS -->
 <link rel="stylesheet" href="{% static 'css/stripe.css' %}">
 <!-- Stripe JS V3 -->
 <script src="https://js.stripe.com/v3/"></script>
 
-<!---- Content ---->
+<!-- Content -->
 <div class="container">
   <div class="row payment-title">
     <span>{{ plan.type }} Payment</span>
@@ -80,7 +80,7 @@
     </form>
     <div class="row p-0 m-0 my-3 justify-content-end">
       <a href="{% url 'services' %}">
-        <button class="btn category-btn m-0" type="button">Cancel</button>
+        <div class="btn category-btn m-0">Cancel</div>
       </a>
     </div>
   </div>
