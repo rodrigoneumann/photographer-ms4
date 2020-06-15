@@ -127,9 +127,9 @@ The icons were used on the main page in the services section, social media icons
 ## Wireframes
 
 These wireframes were designed with Balsamiq Mockups 3. These were the first version of scope and some minor things have changed during the development for the final version.
-* Mobile displays [here]()
-* Medium displays [here]()
-* Large displays [here]()
+* Mobile displays [here](https://photographer-static.s3.eu-west-2.amazonaws.com/media/Mobile.png)
+* Medium displays [here](https://photographer-static.s3.eu-west-2.amazonaws.com/media/Tablet.png)
+* Large displays [here](https://photographer-static.s3.eu-west-2.amazonaws.com/media/Desktop.png)
 
 # Features
 
