@@ -3,4 +3,4 @@ python:
     - "3.7.7"
 install: "pip install -r requirements.txt"
 script:
-    - SECRET_KEY="asdfg12345" HOSTNAME=127.0.0.1 DATABASE_URL=postgres://accqafwajarsrn:91a25f96cf2fcc2fd880a230e070f064f327d62f83835b9ee9e42920f5bed485@ec2-176-34-97-213.eu-west-1.compute.amazonaws.com:5432/dfprv7cu9ecv0i python manage.py test
+    - SECRET_KEY="asdfg12345" python manage.py test

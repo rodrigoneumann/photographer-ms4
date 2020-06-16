@@ -61,7 +61,7 @@ This is a project that, after evaluation at the Code Institute, will receive oth
 6. [**Deployment**](#deployment)
      - [**Local Deployment**](#local-deployment)
        - [**Instructions**](#instructions)
-     - [**Remote Deployment**](#remote-deployment)
+     - [**Deploying To Heroku**](#deploying-to-heroku)
        - [**Instructions**](#instructions-1)
 7. [**Credits**](#credits)
      - [**Content**](#content)
@@ -415,23 +415,35 @@ Any other extra functionality will be discussed in the future with the customer.
 
 # Testing
 
-During the development of this project, I had the experience of facing some problems, exhaustively testing the functionality of each part of the platform and managed to solve most of the problems that arose before writing this document.
+- During the development of this project, I had the experience of facing some problems, exhaustively testing the functionality of each part of the platform and managed to solve most of the problems that arose before writing this document.
 
-I received help from some family and friends to do the tests on the website resources and all the problems presented were solved without problems.
+- I received help from some family and friends to do the tests on the website resources and all the problems presented were solved without problems.
 
-The tests were performed with a user logged in or not on the platform.
+- The tests were performed with a user logged in or not on the platform.
 
-All models and forms related to adding new photo and video entries as well as the integration of views with templates were tested. All of these functions worked as expected without problems.
+- All models and forms related to adding new photo and video entries as well as the integration of views with templates were tested. All of these functions worked as expected without problems.
 
-The entire subscription plan payment process was thoroughly tested, until all problems were resolved during the development process.
+- The entire subscription plan payment process was thoroughly tested, until all problems were resolved during the development process.
 
-The entire subscription plan payment process was thoroughly tested, until all problems were resolved during the development process.
+- The entire subscription plan payment process was thoroughly tested, until all problems were resolved during the development process.
+- Stripe API payment tests can be done with the following data:
+  ```
+  Card Number - 4242 4242 4242 4242
+  Expiry - Any future date
+  CVC - Any 3 digits
+  ```
 
-With respect to the user's profile, all the functions for changing user data were tested, as well as the process of deleting the user from the system, taking into account the question of the user already having a subscription plan or not. Everything also worked without problems.
+- All the functionalities in user's profile, how changing user data were tested, as well as the process of deleting the user from the system, taking into account the question of the user already having a subscription plan or not. Everything also worked without problems.
 
-The display of the subscription plan time in the user's profile is also working smoothly.
+- The display of the subscription plan time in the user's profile is also working smoothly.
 
-All error or success flash messages are also running smoothly.
+- All error or success flash messages are also running smoothly.
+
+- The Python scripts were checked with pep8online. almost all the errors were solved, The only errors left were a few lines over 80 characters, but almost all of them were less than 90 characters.
+
+- The errors verified with the HTML and CSS W3C validators have all been fixed.
+
+- The check with the JSHint validator returned no errors.
 
 ### Tools used for testing
 
@@ -449,7 +461,7 @@ All error or success flash messages are also running smoothly.
   - [JS Hint](https://jshint.com/)
 
 - Python
-  - [PEP8](http://pep8online.com/) - The Python scripts were checked with pep8online. almost all the errors were solved, the only ones that persisted were of lines longer than 79 characters in some cases, however, in most cases they are in MongoDB query lines.
+  - [PEP8 Online](http://pep8online.com/)
 
 #### Responsiveness
 
@@ -461,7 +473,7 @@ All error or success flash messages are also running smoothly.
 
   - Galaxy Note 8
   - Galaxy Note 9
-  - Gakaxy Note 10 Plus 5G (real device)
+  - Galaxy Note 10 Plus 5G (real device)
   - Galaxy S5
   - Galaxy S7+ (real device)
   - Galaxy S9/S9+ (real device)
@@ -471,8 +483,8 @@ All error or success flash messages are also running smoothly.
   - iPhone 8 Plus (real device)
   - iPhone X (real device)
   - iPhone XR (real device)
-  - iphone XS 
-  - iphone XS Max (real device)
+  - iPhone XS 
+  - iPhone XS Max (real device)
   - Huawei P30 Pro (real device)
   - Nexus 5X
   - Nexus 6P
@@ -502,109 +514,152 @@ All error or success flash messages are also running smoothly.
 
 You will need the following tools installed on your system:
 
-- [Python 3.7.7](https://www.python.org/downloads/)
-- An IDE such as [Visual Studio Code](https://code.visualstudio.com/) or [PyCharm](https://www.jetbrains.com/pycharm/download/)
-- An account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) 
-- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+- [Python 3.x](https://www.python.org/downloads/)
+- An IDE such as [Visual Studio Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/)
 
 ## Local Deployment
 The following instructions are based on use on a Windows 10 OS and IDE VS Code. If your OS is different, the commands may be different, but the process, in general, remains the same.
 
+In order for all features to work locally, ensure you have created an account on the following services:
+
+- [Stripe](https://dashboard.stripe.com/register)
+- [AWS](https://aws.amazon.com/) and [S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+- [Gmail](https://accounts.google.com/signup/v2/webcreateaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default&dsh=S-2113357476%3A1592303044178309&gmb=exp&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp) - Configure the option Allow access to [Less secure apps](https://support.google.com/accounts/answer/6010255?hl=en)
+
 #### Instructions
 
-- Save a copy of the Github repository located at https://github.com/rodrigoneumann/third-milestone-project.
+- Save a copy of the Github repository located at https://github.com/rodrigoneumann/photographer-ms4
   - Unzip the repo into the chosen folder.
 - If you have Git installed on your system, you can clone the repository with the following command.
-```
-git clone https://github.com/rodrigoneumann/third-milestone-project
-```
+  ```
+  git clone https://github.com/rodrigoneumann/photographer-ms4
+  ```
 
 - Within the chosen directory, create a virtual environment with the command:
-```
-python -m venv venv
-```  
-
+  ```
+  python -m venv venv
+  ```  
 - Activate the virtual environment with the command:
-```
-.\venv\bin\activate 
-```
+  ```
+  .venv\Scripts\activate
+  ```
 
 - Install all required modules with the command: 
-```
-pip install -r requirements.txt
-```
+  ```
+  pip install -r requirements.txt
+  ```
 
-- Create a file called `.flaskenv` if not exists.
+- Create a `.env` file with your credentials, this file must be located inside the main app. I provided a .env-example, just fill in the fields with your data and change the name to .env:
+  ```
+  SECRET_KEY=YOUR_SECRET_KEY
+  HOSTNAME=127.0.0.1
+  DEBUG=True
+  EMAIL_HOST_USER=YOUR_CREATED_EMAIL_FOR_THIS_PROJECT
+  EMAIL_HOST_PASSWORD=EMAIL_PASSWORD
+  AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY_ID
+  AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_ACCESS_KEY
+  STRIPE_SECRET_KEY=YOUR_STRIPE_SECRET_KEY
+  STRIPE_PUBLISHABLE_KEY=YOUR_STRIPE_PUBLISHABLE_KEY
+  ```
 
-- Inside the `.flaskenv` file check for the following entries:
-```
-FLASK_ENV=development
-FLASK_APP=app.py
-```
+- Migrate the admin panel models to create your database template with the terminal command
+    ```
+    python manage.py migrate
+    ```
 
-- Create a `.env` file with your credentials:
-e.g
-```
-MONGO_URI="insert your mongo URI details here"
-SECRET_KEY="insert your secret key here"
-```
+- Create a superuser to access the django admin panel and then follow the steps to add your admin username and password:
+    ```
+    python manage.py createsuperuser
+    ```
 
-- Create a database in MongoDB Atlas called **semgmtapp** with a collection called **users**
+- You can now run the program locally with the following command: 
+    ```
+    python manage.py runserver
+    ```
 
-- Run the application with the command
-```
-flask run
-```
-- Open the website at `http://127.0.0.1:5000`
+- For the services page to be accessible, without returning an error, it is necessary to access http://127.0.0.1:8000/admin/ , in the **PROSERVICES**  / **User editing plans**  it is necessary to add a value for each of the three plans. for example:
+Single Plan - £ 100.00, Weekly Plan - £ 300.00 and Monthly Plan - £ 500.00
 
-## Remote Deployment
+- After adding the items from the previous item, the local site will run smoothly.
+
+## Deploying To Heroku
 
 #### Instructions
-To deploy this app to Heroku you need to follow the steps below:
+To deploy this website to Heroku you need to follow the steps below:
 
-- Create a **requirements.txt** file so that Heroku can install all the dependencies required to run the app.
-  `pip freeze > requirements.txt`
+- After the site is deployed locally, It will not be necessary to create a Procfile or requirements.txt file as these will already be available in the cloned repository.
 
-- Create a **Procfile** with the command:
-  `echo web: python app.py > Procfile`
+- Add the line **.env** to .gitignore to not have the personal data exposed in the remote repository.
 
-- In this step, you have to create a free account on the [Heroku website](https://signup.heroku.com/).
--  Login to the account, click on new and then create a new app. In the following screen, you need to give a name and choose the Europe region.
--  In the menu access the **Deploy** option, after that click on Connect to Github. Just below provide the information from the app's repository on GitHub and select the option Enable Automatic Deploy.
-- On the Dashboard of the APP, click on Settings and then click on the option **Reveal config Vars**.
-- Now you need to add the following variables to **Reveal config Vars**:
-  - **IP**: `0.0.0.0`
-  - **PORT**: `5000`
-  - **MONGO_URI**: `link to your Mongo DB`
-  - **SECRET_KEY**: `your chosen secret key`
-- You are now ready to access the deployed app on Heroku.
+- Send the content of the site deployed locally to your github account.
+
+- You have to create a free account on the [Heroku website](https://signup.heroku.com/).
+  - Login to the account, click on new and then create a new app. In the following screen, you need to give a name and choose the Europe region.
+  - On the dashboard, click the **RESOURCES**. From within the **ADDONS** input field start typing **POSTGRES** until can select **HEROKU POSTGRES** and select it.
+  - In the plan box select **HOBBY DEV - FREE**, then click **PROVISION**.
+  - Once set up, click the Postgres database, select the **SETTINGS** tab and **DATABASE CREDENTIALS**. Make a note of the **URI** value.
+  - On the Dashboard of the APP, click on Settings and then click on the option **Reveal config Vars**.
+  - See that the **DATABASE_URL** entry will already be applied to the APP
+  - Now you need to add the following variables to **Reveal config Vars**:
+    ```
+    - HOSTNAME: The URL you are deploying to, for example photographer.herokuapp.com
+    - SECRET_KEY: your chosen secret key
+    - EMAIL_HOST_USER: your created email for this website
+    - EMAIL_HOST_PASSWORD: email password
+    - AWS_ACCESS_KEY_ID: your aws access key Id
+    - AWS_SECRET_ACCESS_KEY: your AWS secret access key
+    - STRIPE_SECRET_KEY: Stripe secret Key
+    - STRIPE_PUBLISHABLE_KEY: Stripe secret Key
+    ```
+  - Now that the Heroku app is set up, you need to add the remote database to the website in your local IDE:
+  In the .env file, you need to add data from the remote database, with the data you took note of when setting up on Heroku, for example:
+    ```
+    DATABASE_URL: postgres://........
+    ```
+  - Now your local deployed site is set up to the remote Postgres db so you need to run:
+    ```
+	python manage.py migrate
+    ```
+  - And then create a superuser to the remote data base:
+	  ```
+    python manage.py createsuperuser
+    ```
+  - After completing all the steps above, return to the Heroku Dashboard and click on **DEPLOY** option menu, scroll down until Deployment method and select Github and then **Connect to Github**.
+  - Just below provide the information from the website repository on GitHub and select the option Enable Automatic Deploy.
+  - Wait for the application to be created and, once completed, click on the "OPEN APP" button at the top of the page to open the website in the browser.
 
 # Credits
 
 ## Content
-Most of the texts of this project were written by me.
-Only the description of the properties in the ads was copied from other estate ads **for example only**.
+Most of the texts presented on the website were based on information provided by the photographer and written in English by me.
 
 ## Media
 #### Images
-The logo vector was inspired in this [Logo](http://www.eatlogos.com/building_logos/building_free_logos_download.php?eatlogos=vector_construction_house_logo&le_id=432) and changed for my needs.
-- The images in this project were sourced from [Pixabay](http://www.pixabay.com):
-  - **House** and **building** images for the banner was sourced from [rachelmatthews7](https://pixabay.com/pt/users/rachelmatthews7-1955936/) profile.
-  - **House Icon** for the favicon was sourced from [Clker-Free-Vector-Images](https://pixabay.com/pt/vectors/casa-home-s%C3%ADmbolo-em-branco-305683/) profile.
-  - The **white** character on the My_ads when there are no ads in profile and no photo in profile was sourced from [Peggy_Marco](https://pixabay.com/pt/users/peggy_marco-1553824/) profile.
-  - **No photo** ad image was sourced from: [OpenClipart-Vectors](https://pixabay.com/vectors/house-home-real-estate-architecture-2026116/) profile
-  - The "wood floor" used in background image was sourced from [Pexels](https://pixabay.com/photos/floor-wood-parquet-wooden-brown-1846849/) profile.
-  - The **Red house Icon** used in the carousel when no ads were sourced from [OpenClipart-Vectors](https://pixabay.com/vectors/real-estate-estate-home-house-155524/) profile.
-  - The main **banner image* for the README was sourced by [www.pixeden.com](https://www.pixeden.com/free-design-web-resources).
-- Images for the **properties** that were added by me was sourced by Pixabay as well, but other users can provide different sources for its ads.
+- All images on the main page and portfolio were produced and supplied by photographer Paolo Martinelli.
+- The images on the contact page, services and the third photo, almost on the footer on the About me page were sourced from [Pixabay](http://www.pixabay.com).
+- The main README banner with the device screens is a mockup sourced by [FreePik](http://www.freepik.com) and edited by me.
+
+#### Videos
+
+  - All videos on portfolio were produced and supplied by photographer Paolo Martinelli.
 
 ### Code
-- The code for the carousel on the main page was used directly from the [Bootstrap](https://getbootstrap.com/docs/4.0/components/carousel/) library.
-- Flask architecture design based on blueprints learned and understanding ideas from here. [CodeShow](https://www.youtube.com/watch?v=-qWySnuoaTM&t=5706s) 
+
+- The sidebar was inspired by the model available at [https://azmind.com/bootstrap-sidebar-menu/](https://azmind.com/bootstrap-sidebar-menu/). It has been changed and adapted to my needs.
+
+- Vitor  Freitas at [https://simpleisbetterthancomplex.com](https://simpleisbetterthancomplex.com/) - this blog helped me solve some of the bigger problems I encountered. Excellent material very well explained.
+
+- Max Goodridge at [https://www.youtube.com/watch?v=Fc2O3_2kax8&list=PLw02n0FEB3E3VSHjyYMcFadtQORvl1Ssj] - This playlist about Django helped me a lot with many questions about forms and to understand some weird things about Django Framework.
+
+- The fade up animation in the portfolio photos was used from this library [Animate On Scroll](https://michalsnik.github.io/aos/)
+
 - The code for adding the correct prefixes to CSS was created using [AutoPrefixer](https://autoprefixer.github.io/).
+
+- Several small doubts and in the development process were solved by similar problems in the [Stack Overflow](https://stackoverflow.com/).
 
 ## Acknowledgements
 Very Special Thanks to:
 - My mentor in Code Institute **Sandeep Aggarwal** who had all the patience to explain and make me understand certain concepts and peculiarities of the project content.
-- All people, including family, friends, and colleagues who have tested the platform on their real devices, reporting to me about any usability issues and giving improvement tips to improve the usability.
+- All people, including family, friends, and colleagues who have tested this project on their real devices, reporting to me about any usability issues and giving improvement tips to improve the usability.
 - To all of the Code Institute Slack community for the help in my issues and review to my project code.

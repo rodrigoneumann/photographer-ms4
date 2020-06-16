@@ -30,7 +30,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if 'DEBUG' in env:
+    DEBUG = env('DEBUG')
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = [env('HOSTNAME'), '192.168.1.174']
 
@@ -86,12 +89,11 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if env.db('DATABASE_URL'):
+if 'DATABASE_URL' in env:
     DATABASES = {
         "default": dj_database_url.parse(env("DATABASE_URL"))
     }
 else:
-    print("Using sqlite3")
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
@@ -178,7 +180,7 @@ STRIPE_PUBLISHABLE_KEY = env("STRIPE_PUBLISHABLE_KEY")
 # Files Storage
 DEFAULT_FILE_STORAGE = "main.custom_storage.MediaStorage"
 
-# Development local static files, after project done, send to remote server
+# Static Files Storage
 STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 # Message tags to add bootstrap style for alert messages
