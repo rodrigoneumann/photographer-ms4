@@ -113,11 +113,11 @@ The main idea for the design of this project was to have a serious and professio
 ### Colours
 
 - In the color scheme was used shades of white, with only differences in opacity.
-- In the Sidebar I used the white background with letters in a dark grey tone, giving a greater contrast for logo and menu options. And a darker shade of red for the hover effect.
+- I used the white background with letters in a dark grey tone, In the Sidebar, giving a greater contrast for the logo and menu options. And a darker shade of red for the hover effect.
 - A slightly lighter shade of black was used in the background #191919
-- In the boxes in addition to the variation of shades of gray, a border in white tone with opacity was added to give an elegant highlight.
-- the buttons used the same shade of red as the sidebar, however the hover effect was added a little more brightly and a border with a darker shade of red, making an interesting effect which contrasts with the white color font.
-- In the portfolio photos, a shadow effect with a white tone with blur was used.
+- In order to give an elegant highlight, a border in white tone with opacity was added to the boxes, in addition to the variation of shades of grey.
+- The same shade of red in the sidebar was used for the buttons, however, a slightly brighter effect and a darker red border have been added, creating an interesting effect that contrasts with the white colour font.
+- A shadow effect with a white tone with blur was used in the portfolio photos.
 
 ### Icons
 
@@ -158,36 +158,32 @@ The user connected to the system has access to all the content of the website an
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.35.40.png" target="_blank" rel="noopener" width="400" alt="Register new user">
 </div>
 
-When accessing the registration screen, the user needs to fill in first name, last name, email and choose a username and password for the platform.
-Some checks are made on the database before the new inclusion as if the username already existed in the database; in this case, an error message is displayed.
+When accessing the registration screen, the user must to fill in his/her first name, last name, email and choose a username and password for the platform.
+Some checks are made on the database before the new inclusion,such as if the username already exists in the database (in this case, an error message is displayed).
 It is also necessary that the password meets the minimum security requirements defined by the Django authentication system.
-Below the registration button, a link is available that takes the login page directly to users already registered.
+A link that promptly directs registered users to the login page is available below the registration button. 
 
 ### User Login
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.42.00.png" target="_blank" rel="noopener" width="400" alt="User Login">
 </div>
 
-On the login screen, the user is asked to fill in his login and password for access.
-If the user does not remember his password, he can request a password reset at the FORGOT PASSWORD link.
-A link to access the registration page is provided immediately below if the user does not already have it.
+On the login screen, the user is asked to fill in his/her login and password for access. If the user does not remember the password, he/she can request a password reset at the FORGOT PASSWORD link. A link to access the registration page is provided immediately below if the user does not already have it.
 
 ### User Profile
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+14.51.43.png" target="_blank" rel="noopener" width="500" alt="User Profile">
 </div>
 
-After logging into the system, the agent can access their profile screen via the MY ACCOUNT button on the sidebar.
-There are three buttons, one that takes you to the page to change the profile, password reset, and another to return to the main page.
+After logging into the system, the user can access the profile screen via the MY ACCOUNT button on the sidebar.
+There are three buttons, one that takes you to the page to change the profile, one to reset the password, and other to return to the main page.
 
 #### Edit Profile
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+15.00.43.png" target="_blank" rel="noopener" width="450" alt="Edit Profile">
 </div>
 
-In the edit profile screen, the change of the user's first name, last name and email is available.
-Three buttons are available on this page, one to return to the main page, one to save changes and the last to delete the user account.
-** It will only be possible to delete the user if he does not have an active subscription plan.
+It is possible to change the user's first name, last name and email acessing the edit profile screen. Three buttons are available on this page: one to return to the main page, one to save changes and the last one to delete the user account. ** It will only be possible to delete the user if he/she does not have an active subscription plan.
 
 #### Password Reset
 <div align="center">
@@ -207,7 +203,7 @@ Three buttons are available on this page, one to return to the main page, one to
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+15.53.33.png" target="_blank" rel="noopener" width="450" alt="Password Reset">
 </div>
-<p>After clicking update a confirmation screen will be displayed and the redirect button will be displayed for the login screen</p>
+<p>After clicking update, a confirmation screen will be displayed and the redirect button will be displayed for the login screen</p>
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+16.03.45.png" target="_blank" rel="noopener" width="450" alt="Password Reset">
 </div>
@@ -218,7 +214,7 @@ Three buttons are available on this page, one to return to the main page, one to
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+16.13.30.png" target="_blank" rel="noopener" width="450" alt="Delete Account">
 </div>
 
-When clicking on the button to delete the account, a message is displayed alerting the user that this action will be permanent and cannot be undone. If the user wishes to continue the account will be deleted. A button is also displayed to return to the profile page.
+When clicking on the button to delete the account, a message is displayed alerting the user that this action will be permanent and cannot be undone. If the user wishes to continue, the account will be deleted. A button is also displayed to return to the profile page.
 
 ### Portfolio selection
 <div align="center">
@@ -265,20 +261,19 @@ Three photos were included among the texts to generate a more pleasant visual im
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.08.58.png" target="_blank" width="450" rel="noopener" alt="Youtube Editing">
 </div>
 
-On the services page in the video editing section for YouTubers, 3 plan options are available:
-<p>Single Job, which consists of a single edited and revised video.</p>
-Weekly plan which consists of one week of subscription with up to 3 videos edited and reviewed.
-<p>Monthly plan that consists of a month of subscription with up to 20 edited and reviewed videos.</p>
+Three plan options are available for YouTubers in the services page, in the video editing section:
+<p>Single Job: Which consists of a single edited and revised video.</p>
+Weekly plan: Which consists of one week of subscription with up to 3 videos edited and reviewed.
+<p>Monthly plan: Which consists of a month of subscription with up to 20 edited and reviewed videos.</p>
 <p>After choosing the plan, it is necessary to click on the Hire Me button, which redirects the user to the payment screen.</p>
-**The user must be logged in the system before going to the payment page, if not logged in, he will be taken to the login page.
+**The user must be logged in the system before going to the payment page, otherwise, he/she will be taken to the login page.
 
 #### Subscription Payment Page
 <div align="center">
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+18.22.06.png" target="_blank" width="250" rel="noopener" alt="Subscription Plan Payment">
 </div>
 
-On the payment page of the plan, data such as name and email of the logged-in user, such as the selected subscription plan and the price are automatically filled in. the only field available for the user to fill in is the card details, expiration date, security code and postcode.
-After filling in without typing errors, the customer can click on PAY NOW to complete the payment.
+Data such as name and email of the logged-in user, the selected subscription plan and the price are automatically filled in on the payment page. The only field available to be filled in by the user is the card number, expiration date, security code and postcode. After filling in without typing errors, the customer can click on PAY NOW to complete the payment.
 
 #### Payment Successful Page
 <div align="center">
@@ -334,8 +329,7 @@ It is possible to delete a photo or video entry just by clicking the delete butt
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-12+at+17.19.54.png" target="_blank" width="450" rel="noopener" alt="Error page">
 </div>
 
-A 404 error page will be displayed if the user tries to access any page that does not exist in the app.
-A button will be shown that redirects the user to the main page.
+A 404 error page will be displayed if the user tries to access any page that does not exist in the app. A button that redirects the user to the main page will be shown. 
 
 ## Features Left to Implement
 
@@ -419,9 +413,9 @@ Any other extra functionality will be discussed in the future with the customer.
 
 - I received help from some family and friends to do the tests on the website resources and all the problems presented were solved without problems.
 
-- The tests were performed with a user logged in or not on the platform.
+- The tests were performed with either a user logged in or not into the platform.
 
-- All models and forms related to adding new photo and video entries as well as the integration of views with templates were tested. All of these functions worked as expected without problems.
+- All models and forms related to the addition of new photo and video entries, as well as the integration of views with templates were tested. All these functions worked smoothly as expected.
 
 - The entire subscription plan payment process was thoroughly tested, until all problems were resolved during the development process.
 
@@ -433,13 +427,13 @@ Any other extra functionality will be discussed in the future with the customer.
   CVC - Any 3 digits
   ```
 
-- All the functionalities in user's profile, how changing user data were tested, as well as the process of deleting the user from the system, taking into account the question of the user already having a subscription plan or not. Everything also worked without problems.
+- All the functionalities in user's profile, such as changing user data, were tested, as well the process of deleting the user from the system, taking into account the matter of the user already having a subscription plan or not. Everything also worked without problems.
 
 - The display of the subscription plan time in the user's profile is also working smoothly.
 
 - All error or success flash messages are also running smoothly.
 
-- The Python scripts were checked with pep8online. almost all the errors were solved, The only errors left were a few lines over 80 characters, but almost all of them were less than 90 characters.
+- The Python scripts were checked with pep8online. Almost all the errors were solved, the only remaining errors were a few lines over 80 characters, but almost all of them have less than 90 characters.
 
 - The errors verified with the HTML and CSS W3C validators have all been fixed.
 
@@ -508,7 +502,7 @@ Any other extra functionality will be discussed in the future with the customer.
 * Windows 10 computer
   - Philips 1080p Full HD (real device)
  
-**Were found some display issues with discontinued browsers such as IE and obsolete versions of Chrome and Opera.**
+**Some display issues with discontinued browsers such as IE and obsolete versions of Chrome and Opera were found.**
 
 # Deployment
 
@@ -521,7 +515,7 @@ You will need the following tools installed on your system:
 ## Local Deployment
 The following instructions are based on use on a Windows 10 OS and IDE VS Code. If your OS is different, the commands may be different, but the process, in general, remains the same.
 
-In order for all features to work locally, ensure you have created an account on the following services:
+In order to have all features working locally, ensure you have created an account on the following services:
 
 - [Stripe](https://dashboard.stripe.com/register)
 - [AWS](https://aws.amazon.com/) and [S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
@@ -650,7 +644,7 @@ Most of the texts presented on the website were based on information provided by
 
 - Vitor  Freitas at [https://simpleisbetterthancomplex.com](https://simpleisbetterthancomplex.com/) - this blog helped me solve some of the bigger problems I encountered. Excellent material very well explained.
 
-- Max Goodridge at [https://www.youtube.com/watch?v=Fc2O3_2kax8&list=PLw02n0FEB3E3VSHjyYMcFadtQORvl1Ssj] - This playlist about Django helped me a lot with many questions about forms and to understand some weird things about Django Framework.
+- Max Goodridge at [https://www.youtube.com/watch?v=Fc2O3_2kax8&list=PLw02n0FEB3E3VSHjyYMcFadtQORvl1Ssj](https://www.youtube.com/watch?v=Fc2O3_2kax8&list=PLw02n0FEB3E3VSHjyYMcFadtQORvl1Ssj) - This playlist about Django helped me a lot with many questions about forms and to understand some weird things about Django Framework.
 
 - The fade up animation in the portfolio photos was used from this library [Animate On Scroll](https://michalsnik.github.io/aos/)
 
