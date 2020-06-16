@@ -19,7 +19,7 @@ urlpatterns = [
         name="logout",
     ),
     path("profile/", profile, name="profile"),
-    path("profile/edit", edit_profile, name ="edit_profile"),
+    path("profile/edit", edit_profile, name="edit_profile"),
     path("pwd-reset/", include(urls_pwd_rst)),
     path("delete-user/", delete_user, name="delete_user"),
 ]

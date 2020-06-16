@@ -27,15 +27,8 @@ def profile(request):
     """ Renders the user's profile page with info about personal details
     and subscription plan details, if subscribed. """
 
-    if request.user.is_authenticated is False:
-        messages.error(
-            request, "You are not authenticated, please login to view this page"
-        )
-        return redirect("login")
-
-    # check subscription
     is_subscribed = UserEditingPlans.objects.filter(user=request.user).first()
-    if is_subscribed != None:
+    if is_subscribed is not None:
 
         subscription = is_subscribed.editing_plan
         plan = str(VideoEditingPlans.objects.get(type=subscription))
@@ -94,7 +87,7 @@ def delete_user(request):
     user = User.objects.get(id=request.user.id)
     is_subscribed = UserEditingPlans.objects.filter(user=user).first()
 
-    if is_subscribed == None:
+    if is_subscribed is None:
         if request.method == "POST":
             user.delete()
             return redirect("index")

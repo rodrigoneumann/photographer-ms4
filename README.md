@@ -404,7 +404,11 @@ Any other extra functionality will be discussed in the future with the customer.
      - AWS SDK for Python to use with S3 Buckets
   - [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) 
      - It is the default templating language for Django used for display data from the python application in Html templates.
-
+  - [Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup) 
+     - JS Library used to view the portfolio photos in a maximized size, with captions on the footer and carousel.
+  - [Animate On Scroll](https://michalsnik.github.io/aos/) 
+     - Animation effect JS library when scrolling the mouse used in the portfolio photos and in the portfolio selection page.
+  
 ## Languages
 
   - In this project Is used **HTML5**, **CSS**, **JAVASCRIPT** and **PYTHON** as programming languages.
