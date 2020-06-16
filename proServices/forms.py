@@ -12,6 +12,7 @@ PHOTOS_SERVICES = [
 
 class PhotoQuoteForm(forms.Form):
     """ Form for Photo Services Quotation """
+
     name = forms.CharField(required=True, max_length=90)
     email = forms.EmailField(required=True)
     subject = forms.CharField(required=True, max_length=40)
