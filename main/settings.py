@@ -146,7 +146,7 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'profile'
 LOGOUT_REDIRECT_URL = '/'
 
-#Cryspy template for bootstrap 4 configuration
+# Cryspy template for bootstrap 4 configuration
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
@@ -178,7 +178,7 @@ STRIPE_PUBLISHABLE_KEY = env("STRIPE_PUBLISHABLE_KEY")
 # Files Storage
 DEFAULT_FILE_STORAGE = "main.custom_storage.MediaStorage"
 
-#Development local static files, after project done, send to remote server
+# Development local static files, after project done, send to remote server
 STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 # Message tags to add bootstrap style for alert messages
