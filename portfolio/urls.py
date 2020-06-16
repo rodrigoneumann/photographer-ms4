@@ -11,7 +11,7 @@ from .views import (
     institutional_videos_view,
     shows_videos_view,
     events_videos_view,
-    drone_videos_view
+    drone_videos_view,
 )
 
 urlpatterns = [
