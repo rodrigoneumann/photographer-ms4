@@ -355,7 +355,7 @@ Any other extra functionality will be discussed in the future with the customer.
 ## Tools
   - [Visual Studio Code](https://code.visualstudio.com/) 
       - IDE used for development of this project.
-  - [Balsamiq Mockups 3](https://balsamiq.com/) 
+  - [Balsamiq Mockups](https://balsamiq.com/) 
     - Used to create the wireframes and planning this project
   - [Dev Tools](https://www.google.com/chrome/)
     - This project used the Dev Tools from 3 browsers: Chrome, Firefox and Safari. They were necessary to keep track and test the code during the development.
@@ -365,17 +365,20 @@ Any other extra functionality will be discussed in the future with the customer.
       - This project uses **GitHub** to store and share all project code remotely.
   - [Git](https://git-scm.com/) 
       - It is used for version control
+  - [Stripe](https://stripe.com) 
+      - Payment platform to validate and accept credit card payments.
   - [PostgreSQL](https://www.postgresql.org/) 
       - It is the relational database used for this project, provided by Heroku.
+  - [AWS S3](https://aws.amazon.com/) 
+      - Cloud storage used to store media and static files for this project.
   - [Photoshop 2020](http://www.adobe.com/Photoshop)
       - This project used **Photoshop 2020** to edit all the images.
   - [Illustrator 2020](http://www.adobe.com/illustrator)
       - This project used **Illustrator 2020** to edit the Readme main image.
+  - [Travis CI](https://travis-ci.org/) 
+      - For continuous integration.
   - [Tinypng](https://tinypng.com/)
       -  Used to compress the size of images.
-  - [AWS S3](https://aws.amazon.com/) 
-      - Cloud storage used to store media and static files for this project.
-
 
 ## Libraries
 
@@ -387,12 +390,20 @@ Any other extra functionality will be discussed in the future with the customer.
       - The project uses **Google fonts** to provide 'Roboto' font.
   - [JQuery](https://jquery.com) 
       - Used to simplify DOM manipulation.
-  - [Django 3.0.7](https://www.djangoproject.com/)   
+  - [Django 3.0.7](https://www.djangoproject.com/)
      - Back-end Python Framework.
-  - [Django Storages](https://github.com/boto/boto3) - collection of custom storage backends for Django. Used with Boto 3 for AWS S3 Buckets use.
-  - [Boto3](https://github.com/boto/boto3) - AWS SDK for Python to use with S3 Buckets
+  - [Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) 
+     - To style django forms with Bootstrap 4.
+  - [Django-environ](https://django-environ.readthedocs.io/en/latest/) 
+      - To configure the Django application with environment variables.
+  - [Django-storages](https://github.com/boto/boto3) 
+     - collection of custom storage backends for Django. Used with Boto 3 for AWS S3 Buckets.
+  - [Psycopg2](https://pypi.org/project/psycopg2/)
+     - PostgreSQL database adapter for Python.
+  - [Boto3](https://github.com/boto/boto3) 
+     - AWS SDK for Python to use with S3 Buckets
   - [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) 
-      - It is the default templating language for Django used for display data from the python application in Html templates.
+     - It is the default templating language for Django used for display data from the python application in Html templates.
 
 ## Languages
 
@@ -402,19 +413,21 @@ Any other extra functionality will be discussed in the future with the customer.
 
 During the development of this project, I had the experience of facing some problems, exhaustively testing the functionality of each part of the platform and managed to solve most of the problems that arose before writing this document.
 
-I received help from some family and friends to do the tests on the platform resources and all the problems presented were solved without problems.
+I received help from some family and friends to do the tests on the website resources and all the problems presented were solved without problems.
 
 The tests were performed with a user logged in or not on the platform.
 
-Tests of direct access to the system directly through the path without authentication or access to content restricted to another user were all blocked and worked without problems.
+All models and forms related to adding new photo and video entries as well as the integration of views with templates were tested. All of these functions worked as expected without problems.
 
-New agent registration tests, all existing user checks, profile options, how to change the password, change the link to the photo path and delete the account and everything worked without problems.
+The entire subscription plan payment process was thoroughly tested, until all problems were resolved during the development process.
 
-Tests to add new ads since all fields in the forms also responded well to the verification standards before sending the data to the server.
+The entire subscription plan payment process was thoroughly tested, until all problems were resolved during the development process.
 
-The request tests the data for a specific ad so that changes are made and sent back to the database also work smoothly.
-All error or confirmation flash messages are also running smoothly.
+With respect to the user's profile, all the functions for changing user data were tested, as well as the process of deleting the user from the system, taking into account the question of the user already having a subscription plan or not. Everything also worked without problems.
 
+The display of the subscription plan time in the user's profile is also working smoothly.
+
+All error or success flash messages are also running smoothly.
 
 ### Tools used for testing
 
