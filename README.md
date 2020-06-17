@@ -423,8 +423,9 @@ Any other extra functionality will be discussed in the future with the customer.
 - Stripe API payment tests can be done with the following data:
   ```
   Card Number - 4242 4242 4242 4242
-  Expiry - Any future date
-  CVC - Any 3 digits
+  Expiry - 12 / 23
+  CVC - 123
+  POST CODE - 23232
   ```
 
 - All the functionalities in user's profile, such as changing user data, were tested, as well the process of deleting the user from the system, taking into account the matter of the user already having a subscription plan or not. Everything also worked without problems.
