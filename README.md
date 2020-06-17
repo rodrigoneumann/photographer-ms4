@@ -294,7 +294,7 @@ In the photo editing section of the services page, a form is made available for 
 <img src="https://photographer-static.s3.eu-west-2.amazonaws.com/media/Screenshot+2020-06-13+at+13.20.01.png" target="_blank" width="350" rel="noopener" alt="About Me">
 </div>
 
-On the contact page, a form is available for the user to send messages to the photographer containing the fields Name, email, subject and message. - Django send_mail module is fully functional.
+On the contact page, a form is available for the user to send messages to the photographer containing the fields Name, email, subject and message. If the user is logged in, their data such as name and email will be filled in automatically. - Django send_mail module is fully functional.
 
 ### Photo and Video Content ( Content admin users )
 <div align="center">
